@@ -1,0 +1,188 @@
+body {
+  position: relative;
+}
+
+body.active {
+  background: url("../img/cont.jpg") no-repeat top 0px center;
+}
+
+body.active .wrapper {
+  opacity: 0.4;
+}
+
+.eye-3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
+  z-index: 100;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.show-320,
+.show-360,
+.show-375,
+.show-480,
+.show-570,
+.show-640,
+.show-767,
+.show-991,
+.show-1050,
+.show-1199,
+.show-1299 {
+  display: none;
+}
+
+@media (max-width: 1299px) {
+  .show-1299 {
+    display: block;
+  }
+  .hide-1299 {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .show-1199 {
+    display: block;
+  }
+  .hide-1199 {
+    display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .show-1050 {
+    display: block;
+  }
+  .hide-1050 {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .hide-991 {
+    display: none;
+  }
+  .show-991 {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .show-767 {
+    display: block;
+  }
+  .hide-767 {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hide-640 {
+    display: none;
+  }
+  .show-640 {
+    display: flex;
+  }
+}
+
+@media (max-width: 570px) {
+  .show-570 {
+    display: block;
+  }
+  .hide-570 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .show-480 {
+    display: block;
+  }
+  .hide-480 {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .hide-375 {
+    display: none;
+  }
+  .show-375 {
+    display: block;
+  }
+}
+
+@media (max-width: 360px) {
+  .hide-360 {
+    display: none;
+  }
+  .show-360 {
+    display: block;
+  }
+}
+
+@media (max-width: 320px) {
+  .hide-320 {
+    display: none;
+  }
+  .show-320 {
+    display: block;
+  }
+}
+
+.df {
+  display: flex;
+}
+
+.fc {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+
+.aic {
+  display: flex;
+  align-items: center;
+}
+
+.aife {
+  display: flex;
+  align-items: flex-end;
+}
+
+.jcfe {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.jcc {
+  display: flex;
+  justify-content: center;
+}
+
+.jcsb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fww {
+  flex-wrap: wrap;            
+}
+
+.fdc {
+  flex-direction: column;
+}
+
+.ha {
+  height: auto;
+  overflow: visible;
+}
+
+
+
+

@@ -1,0 +1,126 @@
+.lcpadding {
+  padding-left: calc((100% - 1440px)/2);    
+  @media only screen and (max-width : 1199px) {
+    padding-left: calc((100% - 970px)/2);
+  }
+  @media only screen and (max-width : 991px) {
+    padding-left: calc((100% - 750px)/2);
+  }
+  @media only screen and (max-width : 767px) {
+    padding-left: calc((100% - 600px)/2);
+  }
+  @media only screen and (max-width : 640px) {
+    padding-left: calc((100% - 530px)/2);
+  }
+  @media only screen and (max-width : 570px) {
+    padding-left: 15px;
+  }
+}
+
+
+
+.rcpadding {  
+  padding-right: calc((100% - 1440px)/2);
+  @media only screen and (max-width : 1199px) {    
+    padding-right: calc((100% - 970px)/2);
+  }
+  @media only screen and (max-width : 991px) {    
+    padding-right: calc((100% - 750px)/2);
+  }
+  @media only screen and (max-width : 767px) {    
+    padding-right: calc((100% - 600px)/2);
+  }
+  @media only screen and (max-width : 640px) {    
+    padding-right: calc((100% - 530px)/2);
+  }
+  @media only screen and (max-width : 570px) {    
+    padding-right: 15px;
+  }
+}
+
+.contain {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media only screen and (max-width : 1500px) {
+  .contain {
+    max-width: 1170px
+  }      
+}//1415
+
+@media only screen and (max-width : 1199px) {
+  .contain {
+    max-width: 970px
+  }    
+}//1199
+
+
+@media only screen and (max-width : 991px) {
+  .contain {
+    max-width: 750px 
+  }    
+} //991
+
+
+@media only screen and (max-width : 767px) {
+  .contain {
+    max-width: 600px;
+  }
+}//767
+
+@media only screen and (max-width : 640px) {
+  .contain {
+    max-width: 530px;
+  }
+} //640
+
+
+
+@media only screen and (max-width : 575px) {
+  .contain {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}//575
+
+
+
+@media only screen and (max-width : 480px) {
+  
+}//480
+
+@media only screen and (max-width : 375px) {
+  
+}//375
+
+@media only screen and (max-width : 360px) {
+  
+}//360
+
+@media only screen and (max-width : 320px) {
+  body, body > * {
+    width: auto;
+    min-width: 320px;
+  }
+}//320
+
+
+@media only screen and (min-width : 1080px) {
+  .main-mnu {
+    display: block !important;
+  } 
+
+  .hidden-mnu {
+    display: none;
+  }
+} 
+
+
+
+
+

@@ -1,0 +1,105 @@
+@media (max-width : 768px) {
+    .top-mnu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 59px;
+    z-index: 12;
+    background-color: #FFF; 
+    width: 100%;
+    padding: 10px 45px 40px 15px;
+    min-height: 100px;
+    .top-ul {
+      display: block;
+      li {
+        margin-bottom: 24px;
+      }
+      a {
+        font-size: 20px;
+      }
+    }    
+        
+  }
+  .hidden-mnu {
+    display: block;      
+    position: relative;
+    z-index: 11;
+  }
+  .toggle-mnu {
+    display: block;
+    float: right;
+    right: 0;
+    top: 0;
+    text-align: center;
+    line-height: 48px;
+    display: block;
+    width: 16px;
+    height: 9px;
+    margin: 0;    
+  }
+  .toggle-mnu:focus {
+    outline: none;
+  }
+  .toggle-mnu span {
+    position: relative;
+    display: block;  
+    transition: all 0.3s;    
+    backface-visibility: hidden;
+    width: 16px;
+    height: 3px;   
+    background: #000 
+    
+  }
+  .toggle-mnu span {
+    &:after, &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -4px;
+      width: 16px;
+      height: 3px;   
+      background: #000;
+      transition: all 0.3s;    
+      backface-visibility: hidden;             
+      border-radius: 1px;
+    }
+  }
+  .toggle-mnu span:after {
+    top: 3px;     
+  }
+  .toggle-mnu span:before {
+
+  }
+
+  .toggle-mnu {      
+    span {
+      background-color: transparent;
+    }
+  }
+
+
+  .toggle-mnu.on span:before    {
+    transform: rotate(45deg) translate(5px, 5px);
+    top: -6px;
+  }
+  .toggle-mnu.on span:after    {
+    transform: rotate(-45deg) translate(8px, -9px);
+    top: 13px;
+  }
+  .toggle-mnu.on + #menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .toggle-mnu {
+    display: none;
+  }
+  .top-mnu {
+    display: block;
+  }
+}
+
+
