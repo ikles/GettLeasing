@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/select2.min.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/main.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -238,6 +239,188 @@
           </div>
         </div>
       </section>
+      <section class="calc">
+        <div class="contain">
+          <div class="h2"><b>Калькулятор</b> платежа по лизингу</div>
+          <div class="calc__row calc_init">
+            <div class="calc__col calc__col--left">
+              <div class="calc__item">
+                <p class="form-control-static">Стоимость автомобиля</p>
+                <div class="calc__item-row">
+                  <div class="calc__item-wrap">
+                    <input type="text" class="curr form-control apartment_price-input" value="">
+                    <div class="div-control">
+                      <span class="div-control-value"></span>
+                      <span>&nbsp;руб</span>
+                    </div>
+                  </div>
+                  <div class="apartment_price-slider"></div>
+                  <div class="calc__diap">
+                    <span>500 000 ₽</span>
+                    <span>50 000 000 ₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc__item">
+                <p class="form-control-static">Первоначальный взнос, руб.</p>
+                <div class="calc__item-row">
+                  <div class="calc__item-wrap">
+                    <input type="text" class="form-control first_payment-input" value="7 000 000">
+                    <div class="div-control">
+                      <span class="div-control-value"></span>
+                      <span>&nbsp;руб</span>
+                    </div>
+                  </div>
+                  <div class="first_payment-slider"></div>
+                  <div class="calc__diap">
+                    <span>0%</span>
+                    <span>49%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calc__item">
+                <p class="form-control-static">Срок договора</p>
+                <div class="calc__item-row">
+                  <div class="calc__item-wrap">
+                    <input type="text" class="form-control credit_duration-input" value="17">              
+                    <div class="div-control">
+                      <span class="div-control-value"></span>
+                      <span>&nbsp;мес</span>
+                    </div>
+                  </div>
+                  <div class="credit_duration-slider"></div>
+                  <div class="calc__diap">
+                    <span>12 месяцев</span>
+                    <span>60 месяцев</span>
+                  </div>
+                </div>
+              </div>
+            </div><!--left-->
+            <div class="calc__col calc__col--right">
+              <div class="calc__top">
+                <img src="img/calc.svg" alt="">
+                <span>Итого</span>
+              </div>
+              <div class="calc__bot">
+                <div class="calc__items">
+                  <div class="calc__item">
+                    <p class="form-control-static">Налоговая экономия</p>
+                    <div class="calc__total-w">
+                      <div class="calc__item-wrap">
+                        <input type="text" class="form-control credit_sum-input calc__total" value="8 000 000">
+                        <div class="div-control">
+                          <span class="div-control-value"></span>
+                          <span>₽<span></span></span>
+                        </div>
+                      </div>                  
+                    </div>
+                    <div class="credit_sum-slider"></div>
+                  </div>
+                  <div class="calc__item">
+                    <p class="form-control-static">Ежемесячный платеж</p>
+                    <div class="calc__item-wrap">
+                      <input type="text" class="form-control monthly_payment-input calc__total" value="488 431">
+                      <div class="div-control">
+                        <span class="div-control-value"></span>
+                        <span>₽</span>
+                      </div>
+                      <div class="monthly_payment-slider"></div>
+                    </div>
+                  </div>
+                </div>
+                <p class="calc__desc">Расчет предварительный. Не является публичной офертой.</p>
+                <a href="#order" class="btn__or calc__but">Получить точный расчет</a>
+              </div>
+            </div><!--rightt-->
+          </div>
+        </div>
+      </section>      
+      <section class="cases">
+        <div class="contain">
+          <div class="h2">Наши <strong>кейсы</strong></div>
+        </div>
+          <div class="cases__slider">            
+            <div class="cases__item">
+  <div class="cases__img"><img src="img/cases-1.jpg" /></div>
+  <div class="cases__inf">
+    <div class="cases__nom">Фура</div>
+    <div class="cases__name">DAF X5200 4x2</div>
+    <div class="cases__row">
+      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 23%
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 13 лет
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> для души
+    </div>
+  </div>
+</div>
+            <div class="cases__item">
+  <div class="cases__img"><img src="img/cases-2.jpg" /></div>
+  <div class="cases__inf">
+    <div class="cases__nom">Фура</div>
+    <div class="cases__name">DAF X5200 4x2</div>
+    <div class="cases__row">
+      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 23%
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 13 лет
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> для души
+    </div>
+  </div>
+</div>
+            <div class="cases__item">
+  <div class="cases__img"><img src="img/cases-3.jpg" /></div>
+  <div class="cases__inf">
+    <div class="cases__nom">Фура</div>
+    <div class="cases__name">DAF X5200 4x2</div>
+    <div class="cases__row">
+      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 23%
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 13 лет
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> для души
+    </div>
+  </div>
+</div>
+            <div class="cases__item">
+  <div class="cases__img"><img src="img/cases-2.jpg" /></div>
+  <div class="cases__inf">
+    <div class="cases__nom">Фура</div>
+    <div class="cases__name">DAF X5200 4x2</div>
+    <div class="cases__row">
+      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 23%
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 13 лет
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> для души
+    </div>
+  </div>
+</div>
+            
+
+          </div>
+          <div class="cases__actions"><a class="cases__btn">Получить предложение</a></div>        
+      </section>
     </main>
     <footer class="footer">  
   
@@ -247,13 +430,11 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/slick.js"></script>
-<script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=<e28ccc70-b9f5-4f7b-aec4-03bab1133076>" type="text/javascript"></script>
-  <script async src="js/placemark.js"></script>  
-  <script src="js/nouislider.js"></script>
-  <script src="js/wNumb.min.js"></script>
-  <script src="js/select2.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/common.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/mortgageCalculator.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>
 

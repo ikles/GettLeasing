@@ -1,6 +1,6 @@
 jQuery(document).ready(function( $ ) {
 
-  
+
 
   $('body').click(function () {
     if( $(".toggle-mnu").hasClass("on") ){
@@ -22,9 +22,9 @@ jQuery(document).ready(function( $ ) {
   });
 
 
-$('*[class$="__btn"], .btn__or').each(function () {
-  $(this).append('<div class="flash_wrap-effects"><div class="flash_effects"></div></div>');
-})
+  $('*[class$="__btn"], .btn__or').each(function () {
+    $(this).append('<div class="flash_wrap-effects"><div class="flash_effects"></div></div>');
+  })
 
 
 //levels menu
@@ -53,17 +53,21 @@ $('*[class$="__btn"], .btn__or').each(function () {
   }
 
 
-  $('.gal__slider').slick({
-    infinite: false,    
-    speed: 600,
+  $('.cases__slider').slick({
+    infinite: true,    
+    speed: 800,
+    cssEase: 'ease-out',
     slidesToScroll: 1,
     autoplay: false,    
-    slidesToShow: 1,
-    cssEase: 'linear',  
+    slidesToShow: 3,    
     autoplaySpeed: 0,  
+    centerMode: true,    
     arrows: true,
+    variableWidth: false,
     pauseOnHover: true,  
   });
+
+
 
   let currentSlide = $('.gal__slider').slick('slickCurrentSlide') + 1;
   const slideCount = $(".gal__slider").slick("getSlick").slideCount;
@@ -144,6 +148,120 @@ $('.eye-3').click(function (e) {
       minimumResultsForSearch: -1
     });
   }
+
+
+  $(function(){
+    $(".calc_init").mortgageCalculator({
+
+// Стоимость квартиры (руб.)
+flatPriceSlider          :     '.apartment_price-slider', // Слайдер
+flatPriceInput           :     '.apartment_price-input',  // Вывод значения
+flatPriceMin             :     500000,  // От
+flatPriceMax             :     50000000, // До
+
+// Первоначальный взнос (руб.)
+firstPaymentSlider      :     '.first_payment-slider', // Слайдер
+firstPaymentInput       :     '.first_payment-input',  // Вывод значения
+firstPaymentMin         :     0,        // От
+firstPaymentMax         :     25000000, // До
+firstPaymentCurrent     :     2000000,        // Значение по умолчанию
+
+// Сумма кредита (руб.)
+
+//del
+
+credSumSlider           :     '.credit_sum-slider', // Слайдер
+credSumInput            :     '.credit_sum-input', // Вывод значения
+credSumCheckbox         :     '.credit_sum-checkbox',  // Переключатель (checkbox)
+credSumMin              :     1000000,  // От
+credSumMax              :     15000000, // До
+credSumCurrent          :     5000000,  // Значение по умолчанию
+
+
+
+// Срок кредита (мес.)
+credDurationSlider      :     '.credit_duration-slider',   // Слайдер
+credDurationInput       :     '.credit_duration-input',    // Вывод значения
+credDurationCheckbox    :     '.credit_duration-checkbox', // Переключатель (checkbox)
+credDurationMin         :     12,   // От
+credDurationMax         :     60, // До
+credDurationCurrent     :     24,  // Значение по умолчанию
+
+// Ставка (%)
+credRateSlider          :     '.credit_rate-slider', // Слайдер
+credRateInput           :     '.credit_rate-input',  // Вывод значения
+credRateMin             :     1,  // От
+credRateMax             :     5, // До
+credRateCurrent         :     0, // Значение по умолчанию
+
+// Ежемесячный платеж (руб.)
+
+
+//dell
+monthPaymentSlider      :     '.monthly_payment-slider',   // Слайдер
+monthPaymentInput       :     '.monthly_payment-input',    // Вывод значения
+monthPaymentCheckbox    :     '.monthly_payment-checkbox', // Переключатель (checkbox)
+monthPaymentMin         :     5000,   // От
+monthPaymentMax         :     1000000 // До
+
+
+});
+  });
+
+
+  /*$(".curr").on("keyup", function(){  
+    const self = $(this);
+    $(this).val(String(self.val().replace(/[^0-9.]/g,'')).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₽');
+  });*/
+
+
+
+
+
+  /*$('input[type="text"].form-control').on('input', function() {
+    const self = $(this);
+    $(this).val(String(self.val().replace(/[^0-9.]/g,'')).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₽');
+  });*/ 
+  
+
+
+  
+
+  
+
+
+/*
+
+
+ $('.credit_sum-input').next('.div-control').find('.div-control-value').html($('.credit_sum-input').val());
+ $('.monthly_payment-input').next('.div-control').find('.div-control-value').html($('.monthly_payment-input').val());
+
+
+
+
+ function inputCalcValueToDiv(controlElem, InputElem) {        
+  $(InputElem).next('.div-control').find('.div-control-value').html($(InputElem).val());
+  if ($(controlElem)) {
+    $(controlElem).mouseup(function () {
+      $(InputElem).next('.div-control').find('.div-control-value').html($(InputElem).val());
+      $('.div-control').show();
+
+
+      $('.credit_sum-input').next('.div-control').find('.div-control-value').html($('.credit_sum-input').val());
+      $('.monthly_payment-input').next('.div-control').find('.div-control-value').html($('.monthly_payment-input').val());
+
+    });
+  }
+}
+
+
+
+inputCalcValueToDiv('.first_payment-slider', '.first_payment-input');
+inputCalcValueToDiv('.credit_duration-slider', '.credit_duration-input');
+inputCalcValueToDiv('.credit_rate-slider', '.credit_rate-input');
+inputCalcValueToDiv('.apartment_price-slider', '.apartment_price-input');*/
+
+
 
   $('.accordion-header').toggleClass('inactive-header');
   $('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
