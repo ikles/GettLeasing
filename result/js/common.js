@@ -62,10 +62,55 @@ jQuery(document).ready(function( $ ) {
     slidesToShow: 3,    
     autoplaySpeed: 0,  
     centerMode: true,    
-    arrows: true,
+    arrows: true,    
     variableWidth: false,
     pauseOnHover: true,  
   });
+
+  $('.rev__slider--1, .rev__slider--2').slick({
+    infinite: true,    
+    speed: 800,
+    cssEase: 'ease-out',
+    slidesToScroll: 1,
+    autoplay: false,    
+    slidesToShow: 4,    
+    autoplaySpeed: 0,      
+    arrows: true, 
+    dots: true,   
+    pauseOnHover: true, 
+    responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    ,
+    {
+      breakpoint: 361,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    ]
+  });
+
+
+  $(".revvid").fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none',
+    helpers : {
+      media : {}
+    }
+  });
+
+  
 
 
 
@@ -117,7 +162,7 @@ $('.eye-3').click(function (e) {
     $('.modal-form__block').click(function (e) {
       e.stopPropagation();  
     });
-    
+
   }
 
   popup('.link2', '.modal-overlay_2', '.modal-close_2');
@@ -222,12 +267,12 @@ monthPaymentMax         :     1000000 // До
     const self = $(this);
     $(this).val(String(self.val().replace(/[^0-9.]/g,'')).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₽');
   });*/ 
-  
 
 
-  
 
-  
+
+
+
 
 
 /*
@@ -262,25 +307,24 @@ inputCalcValueToDiv('.credit_rate-slider', '.credit_rate-input');
 inputCalcValueToDiv('.apartment_price-slider', '.apartment_price-input');*/
 
 
+  function tabs(element) {    
+    $(element).find('.tabs__list-item').click(function () {
+      $(element).find('.tabs__list-item').removeClass('active');
+      $(this).addClass('active');    
+      let num = $(this).index();
+      $(element).find('.tabs__content-list-item').removeClass('active');
+      $(element).find('.tabs__content-list-item').eq(num).addClass('active');    
+    });
+  }
 
-  $('.accordion-header').toggleClass('inactive-header');
-  $('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');
-  $('.accordion-content').first().slideDown().toggleClass('open-content');
-  $('.accordioon-content').first().slideDown().toggleClass('open-content');
+  tabs('.rev__choice-tabs');
+
+
   $('.accordion-header').click(function () {
-    if($(this).is('.inactive-header')) {
-      $('.active-header').toggleClass('active-header').toggleClass('inactive-header').next().slideToggle().toggleClass('open-content');
-      $(this).toggleClass('active-header').toggleClass('inactive-header');
-      $(this).next().slideToggle().toggleClass('open-content');
-    }
-
-    else {
-      $(this).toggleClass('active-header').toggleClass('inactive-header');
-      $(this).next().slideToggle().toggleClass('open-content');
-    }
+    $(this).toggleClass('active-header');
+    $(this).next().slideToggle().toggleClass('open-content');
   });
 
-  return false;
 
 }); //ready
 
