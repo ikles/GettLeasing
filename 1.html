@@ -303,51 +303,71 @@
             </div><!--rightt-->
           </div>
         </div>
-      </section>      
+      </section>
+
       <section class="cases">
-        <div class="contain">
+        <div class="cases__contain contain">
           <div class="h2">Наши <strong>кейсы</strong></div>
+          <div id="dg-container" class="dg-container">
+            <div class="dg-wrapper">          
+              
+              <a href="">
+                @@include('var/_cases__item.html',{
+                  "title":"Фура",
+                  "name":"DAF X5200 4x2",
+                  "price":"10 770 000",
+                  "av":"23%",
+                  "srok":"13 лет",
+                  "goal":"для души",
+                  "img": "img/cases-1.jpg"
+                })
+              </a>          
+              <a href="">
+                @@include('var/_cases__item.html',{
+                  "title":"Фура",
+                  "name":"DAF X5200 4x2",
+                  "price":"10 770 000",
+                  "av":"23%",
+                  "srok":"13 лет",
+                  "goal":"для души",
+                  "img": "img/cases-2.jpg"
+                })
+              </a>
+              <a href="">
+                @@include('var/_cases__item.html',{
+                  "title":"Фура",
+                  "name":"DAF X5200 4x2",
+                  "price":"10 770 000",
+                  "av":"23%",
+                  "srok":"13 лет",
+                  "goal":"для души",
+                  "img": "img/cases-3.jpg"
+                })
+              </a>
+              <a href="">
+                @@include('var/_cases__item.html',{
+                  "title":"Фура",
+                  "name":"DAF X5200 4x2",
+                  "price":"10 770 000",
+                  "av":"23%",
+                  "srok":"13 лет",
+                  "goal":"для души",
+                  "img": "img/cases-2.jpg"
+                })
+              </a>
+
+            </div>
+            <nav> 
+              <span class="dg-prev">&lt;</span>
+              <span class="dg-next">&gt;</span>
+            </nav>
+          </div>
+          <div class="cases__actions"><a class="cases__btn">Получить предложение</a></div>        
         </div>
-        <div class="cases__slider">            
-          @@include('var/_cases__item.html',{
-            "title":"Фура",
-            "name":"DAF X5200 4x2",
-            "price":"10 770 000",
-            "av":"23%",
-            "srok":"13 лет",
-            "goal":"для души",
-            "img": "img/cases-1.jpg"
-          })
-          @@include('var/_cases__item.html',{
-            "title":"Фура",
-            "name":"DAF X5200 4x2",
-            "price":"10 770 000",
-            "av":"23%",
-            "srok":"13 лет",
-            "goal":"для души",
-            "img": "img/cases-2.jpg"
-          })
-          @@include('var/_cases__item.html',{
-            "title":"Фура",
-            "name":"DAF X5200 4x2",
-            "price":"10 770 000",
-            "av":"23%",
-            "srok":"13 лет",
-            "goal":"для души",
-            "img": "img/cases-3.jpg"
-          })
-          @@include('var/_cases__item.html',{
-            "title":"Фура",
-            "name":"DAF X5200 4x2",
-            "price":"10 770 000",
-            "av":"23%",
-            "srok":"13 лет",
-            "goal":"для души",
-            "img": "img/cases-2.jpg"
-          })
-        </div>
-        <div class="cases__actions"><a class="cases__btn">Получить предложение</a></div>        
-      </section>      
+      </section>
+
+
+
       <section class="answ">
         <div class="contain">
           <div class="h2"><b>Ответы</b> на частые вопросы</div>

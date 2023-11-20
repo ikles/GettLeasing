@@ -968,14 +968,14 @@ input[type="text"].form-control {
 .cases__item {
   border-radius: 40px;
   background: rgb(255, 255, 255);    
-  filter: drop-shadow(0px 8px 19px rgba(15, 31, 56, 0.10)) drop-shadow(0px 34px 34px rgba(15, 31, 56, 0.09)) drop-shadow(0px 76px 46px rgba(15, 31, 56, 0.05)) drop-shadow(0px 135px 54px rgba(15, 31, 56, 0.01))drop-shadow(0px 211px 59px rgba(15, 31, 56, 0.00));
+  /*filter: drop-shadow(0px 8px 19px rgba(15, 31, 56, 0.10)) drop-shadow(0px 34px 34px rgba(15, 31, 56, 0.09)) drop-shadow(0px 76px 46px rgba(15, 31, 56, 0.05)) drop-shadow(0px 135px 54px rgba(15, 31, 56, 0.01))drop-shadow(0px 211px 59px rgba(15, 31, 56, 0.00));*/
 }
 
 .cases__img {
   border-radius: 40px;
   width: 100%;
   display: flex;  
-  height: 278px;
+  height: 320px;
   overflow: hidden;  
   img {
     object-fit: cover;
@@ -1006,9 +1006,9 @@ input[type="text"].form-control {
   display: flex;
   align-items: center;
   color: rgb(33, 33, 33);
-  font-size: 17px;
+  font-size: 20px;
   + .cases__row {
-    margin-top: 10px;
+    margin-top: 15px;
   }
   
   margin-bottom: 0;  
@@ -1016,8 +1016,7 @@ input[type="text"].form-control {
   img {      
     margin-right: 8px;
   }
-  span {
-    margin-right: 5px;    
+  span {    
     color: rgb(151, 151, 151);  
   }  
 }
@@ -1085,8 +1084,8 @@ input[type="text"].form-control {
 
 
 .cases__item {    
-  transition: all 0.7s ease;  
-  will-change: transform;
+  /*transition: all 0.7s ease;  
+  will-change: transform;*/
   &:hover {
 
   }
@@ -1124,15 +1123,13 @@ input[type="text"].form-control {
     .cases__item {
 
     }  
-    .cases__img {
-      height: 320px;      
-    }
+    
   }//
 }
 
 
 .cases__img {  
-  transition: 0.3s;
+  /*transition: 0.3s;*/
 }
 
 
@@ -1500,19 +1497,67 @@ input[type="text"].form-control {
   }
 }
 
+.cases__contain {
+  max-width: 1195px;  
+}
+
+.dg-container nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 0;
+  > span {
+    position: absolute;
+    z-index: 12;  
+    border: none;
+    background: none;
+    font-size: 0;  
+    background-image: url("../img/arr-l-cas.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 75px;
+    height: 54px;
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid rgb(123, 174, 251); 
+    margin: 0; 
+    &.dg-prev {
+      background-position: center;
+    }
+    &.dg-next {
+      background-position: center;
+      transform: rotate(180deg);
+      right: 0;
+    }
+  }  
+}
+
+.dg-wrapper a {  
+
+  box-shadow: none;
+  filter: drop-shadow(0px 8px 19px rgba(15, 31, 56, 0.10)) drop-shadow(0px 34px 34px rgba(15, 31, 56, 0.09)) drop-shadow(0px 76px 46px rgba(15, 31, 56, 0.05)) drop-shadow(0px 135px 54px rgba(15, 31, 56, 0.01)) drop-shadow(0px 211px 59px rgba(15, 31, 56, 0.00));
+  div {
+    
+  }
+}
+
 //2000
 
 @import "_after-styless";
 
 //background: url('../img/divider.svg') repeat-x bottom left
 
-.cases,
+
+.cases {
+
+}
+.answ,
 .calc,
 .buss,
 .banner,
 .advantages,
 .leasing {
-
+  display: none;
 }
 
 body {  

@@ -144,6 +144,15 @@ $('.eye-3').click(function (e) {
 
 /************************************/
 
+
+
+  $(function() {
+    $('#dg-container').gallery({      
+      interval  : 500  
+    });
+  });
+
+
   function popup(openLink, windowEl, closeEl) {  
     $(openLink).click(function(e) {
       e.preventDefault();

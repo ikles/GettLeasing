@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/select2.min.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" href="css/main.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -334,13 +335,16 @@
             </div><!--rightt-->
           </div>
         </div>
-      </section>      
+      </section>
+
       <section class="cases">
-        <div class="contain">
+        <div class="cases__contain contain">
           <div class="h2">Наши <strong>кейсы</strong></div>
-        </div>
-        <div class="cases__slider">            
-          <div class="cases__item">
+          <div id="dg-container" class="dg-container">
+            <div class="dg-wrapper">          
+              
+              <a href="">
+                <div class="cases__item">
   <div class="cases__img"><img src="img/cases-1.jpg" /></div>
   <div class="cases__inf">
     <div class="cases__nom">Фура</div>
@@ -359,7 +363,9 @@
     </div>
   </div>
 </div>
-          <div class="cases__item">
+              </a>          
+              <a href="">
+                <div class="cases__item">
   <div class="cases__img"><img src="img/cases-2.jpg" /></div>
   <div class="cases__inf">
     <div class="cases__nom">Фура</div>
@@ -378,7 +384,9 @@
     </div>
   </div>
 </div>
-          <div class="cases__item">
+              </a>
+              <a href="">
+                <div class="cases__item">
   <div class="cases__img"><img src="img/cases-3.jpg" /></div>
   <div class="cases__inf">
     <div class="cases__nom">Фура</div>
@@ -397,7 +405,9 @@
     </div>
   </div>
 </div>
-          <div class="cases__item">
+              </a>
+              <a href="">
+                <div class="cases__item">
   <div class="cases__img"><img src="img/cases-2.jpg" /></div>
   <div class="cases__inf">
     <div class="cases__nom">Фура</div>
@@ -416,9 +426,20 @@
     </div>
   </div>
 </div>
+              </a>
+
+            </div>
+            <nav> 
+              <span class="dg-prev">&lt;</span>
+              <span class="dg-next">&gt;</span>
+            </nav>
+          </div>
+          <div class="cases__actions"><a class="cases__btn">Получить предложение</a></div>        
         </div>
-        <div class="cases__actions"><a class="cases__btn">Получить предложение</a></div>        
-      </section>      
+      </section>
+
+
+
       <section class="answ">
         <div class="contain">
           <div class="h2"><b>Ответы</b> на частые вопросы</div>
@@ -599,6 +620,8 @@
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/mortgageCalculator.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+<script type="text/javascript" src="js/jquery.gallery.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>
