@@ -10,7 +10,7 @@ jQuery(document).ready(function( $ ) {
   });
 
 
-  $(".top-mnu").click(function (e) {
+  $(".header__col").click(function (e) {
     e.stopPropagation();
   });
 
@@ -20,6 +20,13 @@ jQuery(document).ready(function( $ ) {
     $('body').toggleClass("body-open");
     $('.header__col').toggleClass("open");    
   });
+
+  $('.burger__close').click(function () {    
+    $('body').removeClass("body-open");
+    $('.header__col').removeClass("open");    
+  });
+
+
 
 
   $('*[class$="__btn"], .btn__or').each(function () {
@@ -80,26 +87,29 @@ jQuery(document).ready(function( $ ) {
     pauseOnHover: true, 
     responsive: [
     {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 3
-      }
-    },
-    {
       breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        arrows: false
+      }
+    },    
+    {
+      breakpoint: 571,
       settings: {
         slidesToShow: 2
       }
-    },
-    ,
+    },    
     {
       breakpoint: 361,
       settings: {
-        slidesToShow: 2
+        slidesToShow: 1
       }
     },
     ]
   });
+
+
+
 
 
   $(".revvid").fancybox({
@@ -111,7 +121,7 @@ jQuery(document).ready(function( $ ) {
   });
 
   
-
+  $(".tel").mask("+ 7 (999)-999-99-99");
 
 
   let currentSlide = $('.gal__slider').slick('slickCurrentSlide') + 1;
@@ -174,8 +184,21 @@ $('.eye-3').click(function (e) {
 
   }
 
-  popup('.link2', '.modal-overlay_2', '.modal-close_2');
-  popup('.link', '.modal-overlay_1', '.modal-close_1');
+  popup('.header__btn', '.modal-overlay_8', '.modal-close_8');
+  popup('.leasing__it .btn__or', '.modal-overlay_8', '.modal-close_8');
+  popup('.leasing__get .btn__or', '.modal-overlay_7', '.modal-close_7');
+  popup('.answ__btn', '.modal-overlay_7', '.modal-close_7');
+  
+  popup('.leasing__modal-i_1', '.modal-overlay_1', '.modal-close_1');
+  popup('.leasing__modal-i_2', '.modal-overlay_2', '.modal-close_2');
+  popup('.leasing__modal-i_3', '.modal-overlay_3', '.modal-close_3');
+  popup('.leasing__modal-i_4', '.modal-overlay_4', '.modal-close_4');
+  popup('.leasing__modal-i_5', '.modal-overlay_5', '.modal-close_5');
+  popup('.leasing__modal-i_6', '.modal-overlay_6', '.modal-close_6');
+
+
+
+
 
 
   $('a[href*=\\#]:not([href=\\#])').click(function () {
@@ -263,57 +286,43 @@ monthPaymentMax         :     1000000 // До
   });
 
 
-  /*$(".curr").on("keyup", function(){  
-    const self = $(this);
-    $(this).val(String(self.val().replace(/[^0-9.]/g,'')).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₽');
-  });*/
 
 
+  
+  var touchStartX = 0;
+  var touchEndX = 0;
 
+  $('.dg-container').on('touchstart', function(eStart) {
+    touchStartX = eStart.originalEvent.touches[0].pageX;
+  });
 
+  $('.dg-container').on('touchend', function(eEnd) {
+    touchEndX = eEnd.originalEvent.changedTouches[0].pageX;
+    var swipeDirection = getSwipeDirection(touchStartX, touchEndX);
 
-  /*$('input[type="text"].form-control').on('input', function() {
-    const self = $(this);
-    $(this).val(String(self.val().replace(/[^0-9.]/g,'')).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₽');
-  });*/ 
+    // Ваш код для обработки направления свайпа
+    if (swipeDirection === 'left') {
+      /*console.log('Свайп влево');*/
+      $('.dg-next').trigger('click');
+    } else if (swipeDirection === 'right') {
+      /*console.log('Свайп вправо');*/
+      $('.dg-prev').trigger('click');
+    }
+  });
 
+  function getSwipeDirection(startX, endX) {
+    var sensitivity = 50; // Чувствительность свайпа
 
+    if (endX - startX > sensitivity) {
+      return 'right';
+    } else if (startX - endX > sensitivity) {
+      return 'left';
+    }
 
-
-
-
-
-
-/*
-
-
- $('.credit_sum-input').next('.div-control').find('.div-control-value').html($('.credit_sum-input').val());
- $('.monthly_payment-input').next('.div-control').find('.div-control-value').html($('.monthly_payment-input').val());
-
-
-
-
- function inputCalcValueToDiv(controlElem, InputElem) {        
-  $(InputElem).next('.div-control').find('.div-control-value').html($(InputElem).val());
-  if ($(controlElem)) {
-    $(controlElem).mouseup(function () {
-      $(InputElem).next('.div-control').find('.div-control-value').html($(InputElem).val());
-      $('.div-control').show();
-
-
-      $('.credit_sum-input').next('.div-control').find('.div-control-value').html($('.credit_sum-input').val());
-      $('.monthly_payment-input').next('.div-control').find('.div-control-value').html($('.monthly_payment-input').val());
-
-    });
+    // Если не определено направление, возвращаем null или другое значение по умолчанию
+    return null;
   }
-}
 
-
-
-inputCalcValueToDiv('.first_payment-slider', '.first_payment-input');
-inputCalcValueToDiv('.credit_duration-slider', '.credit_duration-input');
-inputCalcValueToDiv('.credit_rate-slider', '.credit_rate-input');
-inputCalcValueToDiv('.apartment_price-slider', '.apartment_price-input');*/
 
 
   function tabs(element) {    

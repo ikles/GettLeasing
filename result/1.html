@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/select2.min.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" href="css/main.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -30,22 +31,33 @@
   <div class="contain">
     <div class="header__row">
       <a href="index.html" class="logo"><img src="img/logo.svg" /></a>
-      <ul class="header__ul">
-        <li><a href="">О нас</a></li>
-        <li><a href="">Лизинг</a></li>          
-        <li><a href="">Кредиты для бизнеса</a></li>          
-        <li><a href="">Калькулятор</a></li>          
-        <li><a href="">FAQ</a></li>          
-        <li><a href="">Отзывы</a></li>          
-        <li><a href="">Контакты</a><i></i></li>
-      </ul>
-      <div class="header__r">
-        <a href="" class="header__tel">+7 927 320-52-22</a>
-        <a href="" class="header__btn">Оставить заявку</a>
-        <div class="header__socs">
-          <a href="" class="header__soc"><img src="img/tg.svg" /></a>
-          <a href="" class="header__soc"><img src="img/what.svg" /></a>
+      <div class="header__col">
+      <div class="burger__close">
+        <span>Меню</span>
+        <img src="img/bclose.svg" alt="">
+      </div>
+        <ul class="header__ul">
+          <li><a href="">О нас</a></li>
+          <li><a href="">Лизинг</a></li>          
+          <li><a href="">Кредиты для бизнеса</a></li>          
+          <li><a href="">Калькулятор</a></li>          
+          <li><a href="">FAQ</a></li>          
+          <li><a href="">Отзывы</a></li>          
+          <li><a href="2.html">Контакты</a><i></i></li>
+        </ul>
+        <div class="header__r">
+          <a href="" class="header__tel">+7 927 320-52-22</a>
+          <a href="" class="header__btn">Оставить заявку</a>
+          <div class="header__socs">
+            <a href="" class="header__soc"><img src="img/tg.svg" /></a>
+            <a href="" class="header__soc"><img src="img/what.svg" /></a>
+          </div>
         </div>
+      </div>
+
+      <div class="header__mobile">
+        <a href="" class="header__ph"></a>
+        <div class="burger"></div>
       </div>
     </div>
   </div>
@@ -75,22 +87,30 @@
         <div class="contain">
           <div class="down"><img src="img/down.svg" /></div>
           <div class="h2">Сотрудничаем с <b>20</b> лизинговыми компаниями — <b>лидерами отрасли</b> </div>
-          <div class="advantages__row">
-            <div class="advantages__item">
-              <div class="advantages__img"><img src="img/advantage1.svg" /></div>
-              <div class="advantages__text">Работаем по <b>всей</b><br> России</div>
+          <div class="advantages__row" data-aos="fade-up" data-aos-delay="100">
+            <div class="advantages__col">
+              <div class="advantages__item">
+                <div class="advantages__img"><img src="img/advantage1.svg" /></div>
+                <div class="advantages__text">Работаем по <b>всей</b><br> России</div>
+              </div>
             </div>
-            <div class="advantages__item">
-              <div class="advantages__img"><img src="img/advantage2.svg" /></div>
-              <div class="advantages__text">Делаем скидки на<br> автомобили <b>до 15%</b></div>
+            <div class="advantages__col">
+              <div class="advantages__item">
+                <div class="advantages__img"><img src="img/advantage2.svg" /></div>
+                <div class="advantages__text">Делаем скидки на<br> автомобили <b>до 15%</b></div>
+              </div>
             </div>
-            <div class="advantages__item">
-              <div class="advantages__img"><img src="img/advantage3.svg" /></div>
-              <div class="advantages__text">Подбераем самый<br> <b>выгодный</b> график&nbsp;</div>
+            <div class="advantages__col">
+              <div class="advantages__item">
+                <div class="advantages__img"><img src="img/advantage3.svg" /></div>
+                <div class="advantages__text">Подбераем самый<br> <b>выгодный</b> график&nbsp;</div>
+              </div>
             </div>
-            <div class="advantages__item">
-              <div class="advantages__img"><img src="img/advantage4.svg" /></div>
-              <div class="advantages__text"><b>Помогаем</b> в сборе<br> документов</div>
+            <div class="advantages__col">
+              <div class="advantages__item">
+                <div class="advantages__img"><img src="img/advantage4.svg" /></div>
+                <div class="advantages__text"><b>Помогаем</b> в сборе<br> документов</div>
+              </div>
             </div>
           </div>
           <p class="advantages__p">Мы оказываем <b>не только</b> услуги лизинга, но и <b>сможем</b> пополнить оборотные средства — кредиты для бизнеса!</p>
@@ -100,107 +120,107 @@
         <div class="contain">
           <div class="h2">Что <b>можно</b> оформить в лизинг</div>
           <div class="leasing__row">
-            <div class="leasing__it">
-              <div class="leasing__l">
-                <div class="leasing__title">
-                  Транспортные средства
-                  <div class="leasing__modal-i">
-                    <div class="leasing__modal">
-                      11111111
+            <div class="leasing__col" data-aos="fade-up" data-aos-delay="100">
+              <div class="leasing__it">
+                <div class="leasing__l">
+                  <div class="leasing__content">
+                    <div class="leasing__title">
+                      Транспортные средства
+                      <div class="leasing__modal-i leasing__modal-i_1"></div>
                     </div>
+                    <div class="leasing__desc">Все виды грузовых и легковых авто</div>
+                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__desc">Все виды грузовых и легковых авто</div>
-                <a href="" class="btn__or">Оставить заявку</a>
-              </div>
-              <div class="leasing__img">
-                <img src="img/leasing-1.jpg">
+                <div class="leasing__img">
+                  <img src="img/leasing-1.jpg">
+                </div>
               </div>
             </div><!--leasing__it-->
-            <div class="leasing__it">
-              <div class="leasing__l">
-                <div class="leasing__title">
-                  Спецтехника
-                  <div class="leasing__modal-i">
-                    <div class="leasing__modal">
-                      11111111
+            <div class="leasing__col" data-aos="fade-up" data-aos-delay="100">
+              <div class="leasing__it">
+                <div class="leasing__l">
+                  <div class="leasing__content">
+                    <div class="leasing__title">
+                      Спецтехника
+                      <div class="leasing__modal-i leasing__modal-i_2"></div>                    
                     </div>
+                    <div class="leasing__desc">Экскаваторы, бульдозеры,<br> погрузчики, краны, тракторы и т.д.</div>
+                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__desc">Экскаваторы, бульдозеры,<br> погрузчики, краны, тракторы и т.д.</div>
-                <a href="" class="btn__or">Оставить заявку</a>
-              </div>
-              <div class="leasing__img">
-                <img src="img/leasing-2.jpg">
+                <div class="leasing__img">
+                  <img src="img/leasing-2.jpg">
+                </div>
               </div>
             </div><!--leasing__it-->
-            <div class="leasing__it">
-              <div class="leasing__l">
-                <div class="leasing__title">
-                  Оборудование
-                  <div class="leasing__modal-i">
-                    <div class="leasing__modal">
-                      11111111
+            <div class="leasing__col" data-aos="fade-up" data-aos-delay="150">
+              <div class="leasing__it">
+                <div class="leasing__l">
+                  <div class="leasing__content">
+                    <div class="leasing__title">
+                      Оборудование
+                      <div class="leasing__modal-i leasing__modal-i_3"></div>                    
                     </div>
+                    <div class="leasing__desc">Пищевое, медицинское,<br> строительное, майнинговое и т.д.</div>
+                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__desc">Пищевое, медицинское,<br> строительное, майнинговое и т.д.</div>
-                <a href="" class="btn__or">Оставить заявку</a>
-              </div>
-              <div class="leasing__img">
-                <img src="img/leasing-3.jpg">
+                <div class="leasing__img">
+                  <img src="img/leasing-3.jpg">
+                </div>
               </div>
             </div><!--leasing__it-->
-            <div class="leasing__it">
-              <div class="leasing__l">
-                <div class="leasing__title">
-                  Недвижимость
-                  <div class="leasing__modal-i">
-                    <div class="leasing__modal">
-                      11111111
+            <div class="leasing__col" data-aos="fade-up" data-aos-delay="150">
+              <div class="leasing__it">
+                <div class="leasing__l">
+                  <div class="leasing__content">
+                    <div class="leasing__title">
+                      Недвижимость
+                      <div class="leasing__modal-i leasing__modal-i_4"></div>
                     </div>
+                    <div class="leasing__desc">Офисные здания, торговые <br> площади, квартиры, дома и т.д.</div>
+                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__desc">Офисные здания, торговые <br> площади, квартиры, дома и т.д.</div>
-                <a href="" class="btn__or">Оставить заявку</a>
-              </div>
-              <div class="leasing__img">
-                <img src="img/leasing-4.jpg">
+                <div class="leasing__img">
+                  <img src="img/leasing-4.jpg">
+                </div>
               </div>
             </div><!--leasing__it-->
-            <div class="leasing__it">
-              <div class="leasing__l">
-                <div class="leasing__title">
-                  Техника для спорта и отдыха
-                  <div class="leasing__modal-i">
-                    <div class="leasing__modal">
-                      11111111
+            <div class="leasing__col" data-aos="fade-up" data-aos-delay="200">
+              <div class="leasing__it">
+                <div class="leasing__l">
+                  <div class="leasing__content">
+                    <div class="leasing__title">
+                      Техника для спорта и отдыха
+                      <div class="leasing__modal-i leasing__modal-i_5"></div>                    
                     </div>
+                    <div class="leasing__desc">Багги, квадроциклы, скутеры и т.д.</div>
+                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__desc">Багги, квадроциклы, скутеры и т.д.</div>
-                <a href="" class="btn__or">Оставить заявку</a>
-              </div>
-              <div class="leasing__img">
-                <img src="img/leasing-5.jpg">
+                <div class="leasing__img">
+                  <img src="img/leasing-5.jpg">
+                </div>
               </div>
             </div><!--leasing__it-->
-            <div class="leasing__it">
-              <div class="leasing__l">
-                <div class="leasing__title">
-                  Деньги для бизнеса
-                  <div class="leasing__modal-i">
-                    <div class="leasing__modal">
-                      11111111
+            <div class="leasing__col" data-aos="fade-up" data-aos-delay="200">
+              <div class="leasing__it">
+                <div class="leasing__l">
+                  <div class="leasing__content">
+                    <div class="leasing__title">
+                      Деньги для бизнеса
+                      <div class="leasing__modal-i leasing__modal-i_6"></div>                    
                     </div>
+                    <div class="leasing__desc">На любые нужды, связанные <br> с вашим бизнесом</div>
+                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__desc">На любые нужды, связанные <br> с вашим бизнесом</div>
-                <a href="" class="btn__or">Оставить заявку</a>
-              </div>
-              <div class="leasing__img leasing__img--bg">
-                <img src="img/leasing-6.jpg">
-                <span>От 500 000 ₽</span>
+                <div class="leasing__img leasing__img--bg">
+                  <img src="img/leasing-6.jpg">
+                  <span>От 500 000 ₽</span>
+                </div>
               </div>
             </div><!--leasing__it-->
           </div>
@@ -213,7 +233,7 @@
         <div class="contain">
           <div class="h2 _white"><b>Кредиты для бизнеса</b> на пополнение оборотных средств</div>
           <div class="buss__text"><b>Помимо</b> оформления лизинга, помогаем быстро получить кредит для бизнеса</div>
-          <div class="buss__row">
+          <div class="buss__row" data-aos="fade-up" data-aos-delay="100">
             <div class="buss__it">
               <div class="buss__img"><img src="img/buss-1.svg" class="" /></div>
               <div class="buss__subtitle">Сумма кредита</div>
@@ -299,7 +319,7 @@
             </div><!--left-->
             <div class="calc__col calc__col--right">
               <div class="calc__top">
-                <img src="img/calc.svg" alt="">
+                <img src="img/calc1.svg" alt="">
                 <span>Итого</span>
               </div>
               <div class="calc__bot">
@@ -340,30 +360,8 @@
       <section class="cases">
         <div class="cases__contain contain">
           <div class="h2">Наши <strong>кейсы</strong></div>
-          <div id="dg-container" class="dg-container">
+          <div id="dg-container" class="dg-container" data-aos="fade-up" data-aos-delay="100">
             <div class="dg-wrapper">          
-              
-              <a href="">
-                <div class="cases__item">
-  <div class="cases__img"><img src="img/cases-1.jpg" /></div>
-  <div class="cases__inf">
-    <div class="cases__nom">Фура</div>
-    <div class="cases__name">DAF X5200 4x2</div>
-    <div class="cases__row">
-      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000
-    </div>
-    <div class="cases__row">
-      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 23%
-    </div>
-    <div class="cases__row">
-      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 13 лет
-    </div>
-    <div class="cases__row">
-      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> для души
-    </div>
-  </div>
-</div>
-              </a>          
               <a href="">
                 <div class="cases__item">
   <div class="cases__img"><img src="img/cases-2.jpg" /></div>
@@ -371,16 +369,16 @@
     <div class="cases__nom">Фура</div>
     <div class="cases__name">DAF X5200 4x2</div>
     <div class="cases__row">
-      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000
+      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000 ₽ с НДС
     </div>
     <div class="cases__row">
-      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 23%
+      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 0%
     </div>
     <div class="cases__row">
-      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 13 лет
+      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 5 лет
     </div>
     <div class="cases__row">
-      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> для души
+      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> грузоперевозки
     </div>
   </div>
 </div>
@@ -389,28 +387,28 @@
                 <div class="cases__item">
   <div class="cases__img"><img src="img/cases-3.jpg" /></div>
   <div class="cases__inf">
-    <div class="cases__nom">Фура</div>
-    <div class="cases__name">DAF X5200 4x2</div>
+    <div class="cases__nom">Купе S-класса</div>
+    <div class="cases__name">Mercedes-Benz S 500</div>
     <div class="cases__row">
-      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000
+      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 15 355 000 ₽
     </div>
     <div class="cases__row">
       <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 23%
     </div>
     <div class="cases__row">
-      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 13 лет
+      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 25 лет
     </div>
     <div class="cases__row">
-      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> для души
+      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> возить босса
     </div>
   </div>
 </div>
               </a>
               <a href="">
                 <div class="cases__item">
-  <div class="cases__img"><img src="img/cases-2.jpg" /></div>
+  <div class="cases__img"><img src="img/cases-1.jpg" /></div>
   <div class="cases__inf">
-    <div class="cases__nom">Фура</div>
+    <div class="cases__nom">Споркар</div>
     <div class="cases__name">DAF X5200 4x2</div>
     <div class="cases__row">
       <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000
@@ -434,12 +432,9 @@
               <span class="dg-next">&gt;</span>
             </nav>
           </div>
-          <div class="cases__actions"><a class="cases__btn">Получить предложение</a></div>        
+          <div class="cases__actions"><a class="cases__btn">Получить предложение</a></div>
         </div>
       </section>
-
-
-
       <section class="answ">
         <div class="contain">
           <div class="h2"><b>Ответы</b> на частые вопросы</div>
@@ -530,13 +525,15 @@
                 </div>
               </div>
             </div>
-            <div class="answ_r">
+            <div class="answ__r">
+              <div class="answ__img">
+                <img src="img/dir.jpg" alt="">
+              </div>
               <div class="answ__r-blue">
                 <div class="answ__dir-name">Зайдуллина Эмма Римовна</div>
                 <div class="answ__dir-post">Генеральный директор GettLeasing</div>
-                <a class="answ__btn">Задать свой вопрос</a>
-              </div>
-              <div class="answ__r"></div>
+                <a href="" class="answ__btn">Задать свой вопрос</a>
+              </div>              
             </div>
           </div>
         </div>
@@ -544,7 +541,7 @@
       <section class="rev">        
         <div class="contain">
           <div class="h2"><b>Отзывы</b> клиентов</div>          
-          <div class="tabs rev__choice-tabs">
+          <div class="tabs rev__choice-tabs" data-aos="fade-up" data-aos-delay="100">
             <ul class="tabs__list">
               <li class="tabs__list-item active">Текстовые отзывы</li>
               <li class="tabs__list-item">Видеоотзывы</li>  
@@ -594,7 +591,7 @@
         <a href="index.html" class="footer__logo">
           <img src="img/logo-footer.svg">
         </a>
-        <div class="footer__date">© 2023 GettLeasing</div>
+        <div class="footer__date hide-mob">© 2023 GettLeasing</div>
       </div>
       <div class="footer__col">
         <a href="tel:+7 927 320-52-22" class="footer__phone">+7 927 320-52-22</a>
@@ -608,20 +605,270 @@
         <div class="footer__dir">ИП Зайдуллина Эмма Римовна</div>
         <div class="footer__req">ИНН 027606476410</div>
         <div class="footer__req">ОГРН 322774600515739</div>
+        <div class="footer__date show-mob">© 2023 GettLeasing</div>
       </div>
     </div>
   </div>
 </footer>    
   </div>
   <!--wrapper-->
-  <script src="js/jquery-3.4.1.min.js"></script>
+  
+<div class="modal-overlay modal-overlay_8">        
+  <div class="modal-form__layout"></div>
+  <div class="modal-form__block">     
+    <span class="modal-close modal-close_8"></span>
+    <div class="modal-form__inner">
+      <div class="ask">      
+        <div class="ask__head">Форма обратной связи</div>                  
+        <div class="ask__txt"><strong>Заполните форму</strong> и мы ответим на ваш вопрос в течении<strong>15 минут</strong> для расчета лизинга</div>
+        <form class="ask__form">
+          <input type="text" placeholder="Ваше имя" />
+          <input type="text" placeholder="Название компании" />
+          <input class="ask__input-phone tel" type="text" placeholder="+7 (___) ___- __-__" />          
+          <label class="ask__label">
+            <input type="checkbox" checked/>
+            <span></span>
+            <div>Принимаю <a href="" class="ask__lbl-link">условия обработки персональных данных</a></div>
+          </label>
+          <button class="answ__btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div><!--modal-overlay-->
+
+<div class="modal-overlay modal-overlay_7">        
+  <div class="modal-form__layout"></div>
+  <div class="modal-form__block">     
+    <span class="modal-close modal-close_7"></span>
+    <div class="modal-form__inner">
+      <div class="ask">      
+        <div class="ask__head">Задать вопрос</div>                  
+        <div class="ask__txt"><strong>Заполните форму</strong> и мы ответим на ваш вопрос в течении<strong>15 минут</strong></div>
+        <form class="ask__form">
+          <input type="text" placeholder="Ваше имя" />
+          <input type="text" placeholder="Название компании" />
+          <input class="ask__input-phone tel" type="text" placeholder="+7 (___) ___- __-__" />
+          <textarea class="ask__textarea" placeholder="Напишите ваш вопрос"></textarea>
+          <label class="ask__label">
+            <input type="checkbox" checked/>
+            <span></span>
+            <div>Принимаю <a href="" class="ask__lbl-link">условия обработки персональных данных</a></div>
+          </label>
+          <button class="answ__btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div><!--modal-overlay-->
+
+
+<div class="modal-overlay modal-overlay_1">        
+  <div class="modal-form__layout"></div>
+  <div class="modal-form__block">     
+    <span class="leas__close modal-close_1"></span>          
+    <div class="modal-form__inner">
+      <div class="leas">        
+        <div class="leas__head">Транспортные средства</div>        
+        <div class="leas__list-head">Коммерческий транспорт новый и с пробегом:</div>
+        <ul class="leas-ul">
+          <li>ГАЗ, УАЗ, Lada, Ford, Sollers, Mercedes-Benz, Peugeot, Citroen и другие марки.</li>
+        </ul>
+        <div class="leas__list-head">Кто может оформить лизинг:</div>
+        <ul class="leas-ul">
+          <li>Юридические лица и ИП.</li>
+          <li>Срок регистрации от 1 месяца.</li>
+        </ul>
+        <div class="leas__list-head">Параметры лизинговой сделки:</div>
+        <ul class="leas-ul">
+          <li>Сумма сделки <b>от 500 тысяч рублей</b></li>
+          <li>Аванс <b>от 0% до 49%</b></li>
+          <li>Срок <b> от 1 года до 5 лет</b></li>
+          <li>Выкупной платеж <b>от 1000 рублей</b></li>
+        </ul>
+        <p class="leas__txt">
+          Мы работаем в режиме <strong>«одного окна»</strong>: при необходимости подбираем подходящий предмет лизинга, запрашиваем предложения у <strong>топ-10</strong> лизинговых компаний и помогаем определиться с наиболее выгодным вариантом
+          по лизингу. Вам не нужно делать дополнительные обращения и искать различия в договорах — мы проконсультируем <strong>по всем вопросам.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!--modal-overlay-->
+
+<div class="modal-overlay modal-overlay_2">        
+  <div class="modal-form__layout"></div>
+  <div class="modal-form__block">     
+    <span class="leas__close modal-close_2"></span>          
+    <div class="modal-form__inner">
+      <div class="leas">        
+        <div class="leas__head">Спецтехника</div>        
+        <div class="leas__list-head">Коммерческий транспорт новый и с пробегом:</div>
+        <ul class="leas-ul">
+          <li>ГАЗ, УАЗ, Lada, Ford, Sollers, Mercedes-Benz, Peugeot, Citroen и другие марки.</li>
+        </ul>
+        <div class="leas__list-head">Кто может оформить лизинг:</div>
+        <ul class="leas-ul">
+          <li>Юридические лица и ИП.</li>
+          <li>Срок регистрации от 1 месяца.</li>
+        </ul>
+        <div class="leas__list-head">Параметры лизинговой сделки:</div>
+        <ul class="leas-ul">
+          <li>Сумма сделки <b>от 500 тысяч рублей</b></li>
+          <li>Аванс <b>от 0% до 49%</b></li>
+          <li>Срок <b> от 1 года до 5 лет</b></li>
+          <li>Выкупной платеж <b>от 1000 рублей</b></li>
+        </ul>
+        <p class="leas__txt">
+          Мы работаем в режиме <strong>«одного окна»</strong>: при необходимости подбираем подходящий предмет лизинга, запрашиваем предложения у <strong>топ-10</strong> лизинговых компаний и помогаем определиться с наиболее выгодным вариантом
+          по лизингу. Вам не нужно делать дополнительные обращения и искать различия в договорах — мы проконсультируем <strong>по всем вопросам.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!--modal-overlay-->
+<div class="modal-overlay modal-overlay_3">        
+  <div class="modal-form__layout"></div>
+  <div class="modal-form__block">     
+    <span class="leas__close modal-close_3"></span>          
+    <div class="modal-form__inner">
+      <div class="leas">        
+        <div class="leas__head">Оборудование</div>        
+        <div class="leas__list-head">Коммерческий транспорт новый и с пробегом:</div>
+        <ul class="leas-ul">
+          <li>ГАЗ, УАЗ, Lada, Ford, Sollers, Mercedes-Benz, Peugeot, Citroen и другие марки.</li>
+        </ul>
+        <div class="leas__list-head">Кто может оформить лизинг:</div>
+        <ul class="leas-ul">
+          <li>Юридические лица и ИП.</li>
+          <li>Срок регистрации от 1 месяца.</li>
+        </ul>
+        <div class="leas__list-head">Параметры лизинговой сделки:</div>
+        <ul class="leas-ul">
+          <li>Сумма сделки <b>от 500 тысяч рублей</b></li>
+          <li>Аванс <b>от 0% до 49%</b></li>
+          <li>Срок <b> от 1 года до 5 лет</b></li>
+          <li>Выкупной платеж <b>от 1000 рублей</b></li>
+        </ul>
+        <p class="leas__txt">
+          Мы работаем в режиме <strong>«одного окна»</strong>: при необходимости подбираем подходящий предмет лизинга, запрашиваем предложения у <strong>топ-10</strong> лизинговых компаний и помогаем определиться с наиболее выгодным вариантом
+          по лизингу. Вам не нужно делать дополнительные обращения и искать различия в договорах — мы проконсультируем <strong>по всем вопросам.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!--modal-overlay-->
+<div class="modal-overlay modal-overlay_4">        
+  <div class="modal-form__layout"></div>
+  <div class="modal-form__block">     
+    <span class="leas__close modal-close_4"></span>          
+    <div class="modal-form__inner">
+      <div class="leas">        
+        <div class="leas__head">Недвижимость</div>        
+        <div class="leas__list-head">Коммерческий транспорт новый и с пробегом:</div>
+        <ul class="leas-ul">
+          <li>ГАЗ, УАЗ, Lada, Ford, Sollers, Mercedes-Benz, Peugeot, Citroen и другие марки.</li>
+        </ul>
+        <div class="leas__list-head">Кто может оформить лизинг:</div>
+        <ul class="leas-ul">
+          <li>Юридические лица и ИП.</li>
+          <li>Срок регистрации от 1 месяца.</li>
+        </ul>
+        <div class="leas__list-head">Параметры лизинговой сделки:</div>
+        <ul class="leas-ul">
+          <li>Сумма сделки <b>от 500 тысяч рублей</b></li>
+          <li>Аванс <b>от 0% до 49%</b></li>
+          <li>Срок <b> от 1 года до 5 лет</b></li>
+          <li>Выкупной платеж <b>от 1000 рублей</b></li>
+        </ul>
+        <p class="leas__txt">
+          Мы работаем в режиме <strong>«одного окна»</strong>: при необходимости подбираем подходящий предмет лизинга, запрашиваем предложения у <strong>топ-10</strong> лизинговых компаний и помогаем определиться с наиболее выгодным вариантом
+          по лизингу. Вам не нужно делать дополнительные обращения и искать различия в договорах — мы проконсультируем <strong>по всем вопросам.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!--modal-overlay-->
+<div class="modal-overlay modal-overlay_5">        
+  <div class="modal-form__layout"></div>
+  <div class="modal-form__block">     
+    <span class="leas__close modal-close_5"></span>          
+    <div class="modal-form__inner">
+      <div class="leas">        
+        <div class="leas__head">Техника для спорта и отдыха</div>        
+        <div class="leas__list-head">Коммерческий транспорт новый и с пробегом:</div>
+        <ul class="leas-ul">
+          <li>ГАЗ, УАЗ, Lada, Ford, Sollers, Mercedes-Benz, Peugeot, Citroen и другие марки.</li>
+        </ul>
+        <div class="leas__list-head">Кто может оформить лизинг:</div>
+        <ul class="leas-ul">
+          <li>Юридические лица и ИП.</li>
+          <li>Срок регистрации от 1 месяца.</li>
+        </ul>
+        <div class="leas__list-head">Параметры лизинговой сделки:</div>
+        <ul class="leas-ul">
+          <li>Сумма сделки <b>от 500 тысяч рублей</b></li>
+          <li>Аванс <b>от 0% до 49%</b></li>
+          <li>Срок <b> от 1 года до 5 лет</b></li>
+          <li>Выкупной платеж <b>от 1000 рублей</b></li>
+        </ul>
+        <p class="leas__txt">
+          Мы работаем в режиме <strong>«одного окна»</strong>: при необходимости подбираем подходящий предмет лизинга, запрашиваем предложения у <strong>топ-10</strong> лизинговых компаний и помогаем определиться с наиболее выгодным вариантом
+          по лизингу. Вам не нужно делать дополнительные обращения и искать различия в договорах — мы проконсультируем <strong>по всем вопросам.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!--modal-overlay-->
+<div class="modal-overlay modal-overlay_6">        
+  <div class="modal-form__layout"></div>
+  <div class="modal-form__block">     
+    <span class="leas__close modal-close_6"></span>          
+    <div class="modal-form__inner">
+      <div class="leas">        
+        <div class="leas__head">Деньги для бизнеса</div>        
+        <div class="leas__list-head">Коммерческий транспорт новый и с пробегом:</div>
+        <ul class="leas-ul">
+          <li>ГАЗ, УАЗ, Lada, Ford, Sollers, Mercedes-Benz, Peugeot, Citroen и другие марки.</li>
+        </ul>
+        <div class="leas__list-head">Кто может оформить лизинг:</div>
+        <ul class="leas-ul">
+          <li>Юридические лица и ИП.</li>
+          <li>Срок регистрации от 1 месяца.</li>
+        </ul>
+        <div class="leas__list-head">Параметры лизинговой сделки:</div>
+        <ul class="leas-ul">
+          <li>Сумма сделки <b>от 500 тысяч рублей</b></li>
+          <li>Аванс <b>от 0% до 49%</b></li>
+          <li>Срок <b> от 1 года до 5 лет</b></li>
+          <li>Выкупной платеж <b>от 1000 рублей</b></li>
+        </ul>
+        <p class="leas__txt">
+          Мы работаем в режиме <strong>«одного окна»</strong>: при необходимости подбираем подходящий предмет лизинга, запрашиваем предложения у <strong>топ-10</strong> лизинговых компаний и помогаем определиться с наиболее выгодным вариантом
+          по лизингу. Вам не нужно делать дополнительные обращения и искать различия в договорах — мы проконсультируем <strong>по всем вопросам.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!--modal-overlay-->
+
+<script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/slick.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/select2.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/mortgageCalculator.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
 <script type="text/javascript" src="js/jquery.gallery.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+ document.addEventListener('DOMContentLoaded', ()=> {
+   AOS.init(
+   {disable: 'mobile'}
+    );     
+ }) 
+</script>
 <script src="js/common.js"></script>
 </body>
 </html>

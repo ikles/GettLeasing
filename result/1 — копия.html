@@ -6,7 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Главная</title>  
-  @@include('var/_styless.html')
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Unbounded:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/select2.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="css/main.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -17,7 +26,30 @@
 <body>
 
   <div class="wrapper">    
-    @@include('var/_header.html')    
+    <header class="header">
+  <div class="contain">
+    <div class="header__row">
+      <a href="index.html" class="logo"><img src="img/logo.svg" /></a>
+      <ul class="header__ul">
+        <li><a href="">О нас</a></li>
+        <li><a href="">Лизинг</a></li>          
+        <li><a href="">Кредиты для бизнеса</a></li>          
+        <li><a href="">Калькулятор</a></li>          
+        <li><a href="">FAQ</a></li>          
+        <li><a href="">Отзывы</a></li>          
+        <li><a href="">Контакты</a><i></i></li>
+      </ul>
+      <div class="header__r">
+        <a href="" class="header__tel">+7 927 320-52-22</a>
+        <a href="" class="header__btn">Оставить заявку</a>
+        <div class="header__socs">
+          <a href="" class="header__soc"><img src="img/tg.svg" /></a>
+          <a href="" class="header__soc"><img src="img/what.svg" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>    
     <main class="main">
       <section class="banner">
         <div class="contain">
@@ -43,30 +75,22 @@
         <div class="contain">
           <div class="down"><img src="img/down.svg" /></div>
           <div class="h2">Сотрудничаем с <b>20</b> лизинговыми компаниями — <b>лидерами отрасли</b> </div>
-          <div class="advantages__row" data-aos="fade-up" data-aos-delay="100">
-            <div class="advantages__col">
-              <div class="advantages__item">
-                <div class="advantages__img"><img src="img/advantage1.svg" /></div>
-                <div class="advantages__text">Работаем по <b>всей</b><br> России</div>
-              </div>
+          <div class="advantages__row">
+            <div class="advantages__item">
+              <div class="advantages__img"><img src="img/advantage1.svg" /></div>
+              <div class="advantages__text">Работаем по <b>всей</b><br> России</div>
             </div>
-            <div class="advantages__col">
-              <div class="advantages__item">
-                <div class="advantages__img"><img src="img/advantage2.svg" /></div>
-                <div class="advantages__text">Делаем скидки на<br> автомобили <b>до 15%</b></div>
-              </div>
+            <div class="advantages__item">
+              <div class="advantages__img"><img src="img/advantage2.svg" /></div>
+              <div class="advantages__text">Делаем скидки на<br> автомобили <b>до 15%</b></div>
             </div>
-            <div class="advantages__col">
-              <div class="advantages__item">
-                <div class="advantages__img"><img src="img/advantage3.svg" /></div>
-                <div class="advantages__text">Подбераем самый<br> <b>выгодный</b> график&nbsp;</div>
-              </div>
+            <div class="advantages__item">
+              <div class="advantages__img"><img src="img/advantage3.svg" /></div>
+              <div class="advantages__text">Подбераем самый<br> <b>выгодный</b> график&nbsp;</div>
             </div>
-            <div class="advantages__col">
-              <div class="advantages__item">
-                <div class="advantages__img"><img src="img/advantage4.svg" /></div>
-                <div class="advantages__text"><b>Помогаем</b> в сборе<br> документов</div>
-              </div>
+            <div class="advantages__item">
+              <div class="advantages__img"><img src="img/advantage4.svg" /></div>
+              <div class="advantages__text"><b>Помогаем</b> в сборе<br> документов</div>
             </div>
           </div>
           <p class="advantages__p">Мы оказываем <b>не только</b> услуги лизинга, но и <b>сможем</b> пополнить оборотные средства — кредиты для бизнеса!</p>
@@ -76,107 +100,107 @@
         <div class="contain">
           <div class="h2">Что <b>можно</b> оформить в лизинг</div>
           <div class="leasing__row">
-            <div class="leasing__col" data-aos="fade-up" data-aos-delay="100">
-              <div class="leasing__it">
-                <div class="leasing__l">
-                  <div class="leasing__content">
-                    <div class="leasing__title">
-                      Транспортные средства
-                      <div class="leasing__modal-i leasing__modal-i_1"></div>
+            <div class="leasing__it">
+              <div class="leasing__l">
+                <div class="leasing__title">
+                  Транспортные средства
+                  <div class="leasing__modal-i">
+                    <div class="leasing__modal">
+                      11111111
                     </div>
-                    <div class="leasing__desc">Все виды грузовых и легковых авто</div>
-                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__img">
-                  <img src="img/leasing-1.jpg">
-                </div>
+                <div class="leasing__desc">Все виды грузовых и легковых авто</div>
+                <a href="" class="btn__or">Оставить заявку</a>
+              </div>
+              <div class="leasing__img">
+                <img src="img/leasing-1.jpg">
               </div>
             </div><!--leasing__it-->
-            <div class="leasing__col" data-aos="fade-up" data-aos-delay="100">
-              <div class="leasing__it">
-                <div class="leasing__l">
-                  <div class="leasing__content">
-                    <div class="leasing__title">
-                      Спецтехника
-                      <div class="leasing__modal-i leasing__modal-i_2"></div>                    
+            <div class="leasing__it">
+              <div class="leasing__l">
+                <div class="leasing__title">
+                  Спецтехника
+                  <div class="leasing__modal-i">
+                    <div class="leasing__modal">
+                      11111111
                     </div>
-                    <div class="leasing__desc">Экскаваторы, бульдозеры,<br> погрузчики, краны, тракторы и т.д.</div>
-                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__img">
-                  <img src="img/leasing-2.jpg">
-                </div>
+                <div class="leasing__desc">Экскаваторы, бульдозеры,<br> погрузчики, краны, тракторы и т.д.</div>
+                <a href="" class="btn__or">Оставить заявку</a>
+              </div>
+              <div class="leasing__img">
+                <img src="img/leasing-2.jpg">
               </div>
             </div><!--leasing__it-->
-            <div class="leasing__col" data-aos="fade-up" data-aos-delay="150">
-              <div class="leasing__it">
-                <div class="leasing__l">
-                  <div class="leasing__content">
-                    <div class="leasing__title">
-                      Оборудование
-                      <div class="leasing__modal-i leasing__modal-i_3"></div>                    
+            <div class="leasing__it">
+              <div class="leasing__l">
+                <div class="leasing__title">
+                  Оборудование
+                  <div class="leasing__modal-i">
+                    <div class="leasing__modal">
+                      11111111
                     </div>
-                    <div class="leasing__desc">Пищевое, медицинское,<br> строительное, майнинговое и т.д.</div>
-                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__img">
-                  <img src="img/leasing-3.jpg">
-                </div>
+                <div class="leasing__desc">Пищевое, медицинское,<br> строительное, майнинговое и т.д.</div>
+                <a href="" class="btn__or">Оставить заявку</a>
+              </div>
+              <div class="leasing__img">
+                <img src="img/leasing-3.jpg">
               </div>
             </div><!--leasing__it-->
-            <div class="leasing__col" data-aos="fade-up" data-aos-delay="150">
-              <div class="leasing__it">
-                <div class="leasing__l">
-                  <div class="leasing__content">
-                    <div class="leasing__title">
-                      Недвижимость
-                      <div class="leasing__modal-i leasing__modal-i_4"></div>
+            <div class="leasing__it">
+              <div class="leasing__l">
+                <div class="leasing__title">
+                  Недвижимость
+                  <div class="leasing__modal-i">
+                    <div class="leasing__modal">
+                      11111111
                     </div>
-                    <div class="leasing__desc">Офисные здания, торговые <br> площади, квартиры, дома и т.д.</div>
-                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__img">
-                  <img src="img/leasing-4.jpg">
-                </div>
+                <div class="leasing__desc">Офисные здания, торговые <br> площади, квартиры, дома и т.д.</div>
+                <a href="" class="btn__or">Оставить заявку</a>
+              </div>
+              <div class="leasing__img">
+                <img src="img/leasing-4.jpg">
               </div>
             </div><!--leasing__it-->
-            <div class="leasing__col" data-aos="fade-up" data-aos-delay="200">
-              <div class="leasing__it">
-                <div class="leasing__l">
-                  <div class="leasing__content">
-                    <div class="leasing__title">
-                      Техника для спорта и отдыха
-                      <div class="leasing__modal-i leasing__modal-i_5"></div>                    
+            <div class="leasing__it">
+              <div class="leasing__l">
+                <div class="leasing__title">
+                  Техника для спорта и отдыха
+                  <div class="leasing__modal-i">
+                    <div class="leasing__modal">
+                      11111111
                     </div>
-                    <div class="leasing__desc">Багги, квадроциклы, скутеры и т.д.</div>
-                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__img">
-                  <img src="img/leasing-5.jpg">
-                </div>
+                <div class="leasing__desc">Багги, квадроциклы, скутеры и т.д.</div>
+                <a href="" class="btn__or">Оставить заявку</a>
+              </div>
+              <div class="leasing__img">
+                <img src="img/leasing-5.jpg">
               </div>
             </div><!--leasing__it-->
-            <div class="leasing__col" data-aos="fade-up" data-aos-delay="200">
-              <div class="leasing__it">
-                <div class="leasing__l">
-                  <div class="leasing__content">
-                    <div class="leasing__title">
-                      Деньги для бизнеса
-                      <div class="leasing__modal-i leasing__modal-i_6"></div>                    
+            <div class="leasing__it">
+              <div class="leasing__l">
+                <div class="leasing__title">
+                  Деньги для бизнеса
+                  <div class="leasing__modal-i">
+                    <div class="leasing__modal">
+                      11111111
                     </div>
-                    <div class="leasing__desc">На любые нужды, связанные <br> с вашим бизнесом</div>
-                    <a href="" class="btn__or">Оставить заявку</a>
                   </div>
                 </div>
-                <div class="leasing__img leasing__img--bg">
-                  <img src="img/leasing-6.jpg">
-                  <span>От 500 000 ₽</span>
-                </div>
+                <div class="leasing__desc">На любые нужды, связанные <br> с вашим бизнесом</div>
+                <a href="" class="btn__or">Оставить заявку</a>
+              </div>
+              <div class="leasing__img leasing__img--bg">
+                <img src="img/leasing-6.jpg">
+                <span>От 500 000 ₽</span>
               </div>
             </div><!--leasing__it-->
           </div>
@@ -189,7 +213,7 @@
         <div class="contain">
           <div class="h2 _white"><b>Кредиты для бизнеса</b> на пополнение оборотных средств</div>
           <div class="buss__text"><b>Помимо</b> оформления лизинга, помогаем быстро получить кредит для бизнеса</div>
-          <div class="buss__row" data-aos="fade-up" data-aos-delay="100">
+          <div class="buss__row">
             <div class="buss__it">
               <div class="buss__img"><img src="img/buss-1.svg" class="" /></div>
               <div class="buss__subtitle">Сумма кредита</div>
@@ -275,7 +299,7 @@
             </div><!--left-->
             <div class="calc__col calc__col--right">
               <div class="calc__top">
-                <img src="img/calc1.svg" alt="">
+                <img src="img/calc.svg" alt="">
                 <span>Итого</span>
               </div>
               <div class="calc__bot">
@@ -316,40 +340,72 @@
       <section class="cases">
         <div class="cases__contain contain">
           <div class="h2">Наши <strong>кейсы</strong></div>
-          <div id="dg-container" class="dg-container" data-aos="fade-up" data-aos-delay="100">
+          <div id="dg-container" class="dg-container">
             <div class="dg-wrapper">          
+              
+                        
               <a href="">
-                @@include('var/_cases__item.html',{
-                  "title":"Фура",
-                  "name":"DAF X5200 4x2",
-                  "price":"10 770 000 ₽ с НДС",
-                  "av":"0%",
-                  "srok":"5 лет",
-                  "goal":"грузоперевозки",
-                  "img": "img/cases-2.jpg"
-                })
+                <div class="cases__item">
+  <div class="cases__img"><img src="img/cases-2.jpg" /></div>
+  <div class="cases__inf">
+    <div class="cases__nom">Фура</div>
+    <div class="cases__name">DAF X5200 4x2</div>
+    <div class="cases__row">
+      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000 ₽ с НДС
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 0%
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 5 лет
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> грузоперевозки
+    </div>
+  </div>
+</div>
               </a>
               <a href="">
-                @@include('var/_cases__item.html',{
-                  "title":"Купе S-класса",
-                  "name":"Mercedes-Benz S 500",
-                  "price":"15 355 000 ₽",
-                  "av":"23%",
-                  "srok":"25 лет",
-                  "goal":"возить босса",
-                  "img": "img/cases-3.jpg"
-                })
+                <div class="cases__item">
+  <div class="cases__img"><img src="img/cases-3.jpg" /></div>
+  <div class="cases__inf">
+    <div class="cases__nom">Купе S-класса</div>
+    <div class="cases__name">Mercedes-Benz S 500</div>
+    <div class="cases__row">
+      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 15 355 000 ₽
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 23%
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 25 лет
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> возить босса
+    </div>
+  </div>
+</div>
               </a>
               <a href="">
-                @@include('var/_cases__item.html',{
-                  "title":"Споркар",
-                  "name":"DAF X5200 4x2",
-                  "price":"10 770 000",
-                  "av":"23%",
-                  "srok":"13 лет",
-                  "goal":"для души",
-                  "img": "img/cases-1.jpg"
-                })
+                <div class="cases__item">
+  <div class="cases__img"><img src="img/cases-1.jpg" /></div>
+  <div class="cases__inf">
+    <div class="cases__nom">Споркар</div>
+    <div class="cases__name">DAF X5200 4x2</div>
+    <div class="cases__row">
+      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 10 770 000
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 23%
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 13 лет
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> для души
+    </div>
+  </div>
+</div>
               </a>
 
             </div>
@@ -451,15 +507,13 @@
                 </div>
               </div>
             </div>
-            <div class="answ__r">
-              <div class="answ__img">
-                <img src="img/dir.jpg" alt="">
-              </div>
+            <div class="answ_r">
               <div class="answ__r-blue">
                 <div class="answ__dir-name">Зайдуллина Эмма Римовна</div>
                 <div class="answ__dir-post">Генеральный директор GettLeasing</div>
-                <a href="" class="answ__btn">Задать свой вопрос</a>
-              </div>              
+                <a class="answ__btn">Задать свой вопрос</a>
+              </div>
+              <div class="answ__r"></div>
             </div>
           </div>
         </div>
@@ -467,7 +521,7 @@
       <section class="rev">        
         <div class="contain">
           <div class="h2"><b>Отзывы</b> клиентов</div>          
-          <div class="tabs rev__choice-tabs" data-aos="fade-up" data-aos-delay="100">
+          <div class="tabs rev__choice-tabs">
             <ul class="tabs__list">
               <li class="tabs__list-item active">Текстовые отзывы</li>
               <li class="tabs__list-item">Видеоотзывы</li>  
@@ -510,10 +564,42 @@
         </div>
       </section>
     </main>
-    @@include('var/_footer.html')    
+    <footer class="footer">  
+  <div class="contain">
+    <div class="footer__w">
+      <div class="footer__col">
+        <a href="index.html" class="footer__logo">
+          <img src="img/logo-footer.svg">
+        </a>
+        <div class="footer__date">© 2023 GettLeasing</div>
+      </div>
+      <div class="footer__col">
+        <a href="tel:+7 927 320-52-22" class="footer__phone">+7 927 320-52-22</a>
+        <div class="footer__adress">Адрес: Москва, ул. Корабельная, 5А</div>
+        <div class="fsocs">
+          <a href=""><img src="img/fsoc-1.svg" alt=""></a>
+          <a href=""><img src="img/fsoc-2.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <div class="footer__dir">ИП Зайдуллина Эмма Римовна</div>
+        <div class="footer__req">ИНН 027606476410</div>
+        <div class="footer__req">ОГРН 322774600515739</div>
+      </div>
+    </div>
+  </div>
+</footer>    
   </div>
   <!--wrapper-->
-  @@include('var/_scripts.html')
+  <script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/mortgageCalculator.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+<script type="text/javascript" src="js/jquery.gallery.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>
 
