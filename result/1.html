@@ -37,12 +37,12 @@
         <img src="img/bclose.svg" alt="">
       </div>
         <ul class="header__ul">
-          <li><a href="">О нас</a></li>
-          <li><a href="">Лизинг</a></li>          
-          <li><a href="">Кредиты для бизнеса</a></li>          
-          <li><a href="">Калькулятор</a></li>          
-          <li><a href="">FAQ</a></li>          
-          <li><a href="">Отзывы</a></li>          
+          <li><a href="#advantages">О нас</a></li>
+          <li><a href="#leasing">Лизинг</a></li>          
+          <li><a href="#buss">Кредиты для бизнеса</a></li>          
+          <li><a href="#calc">Калькулятор</a></li>          
+          <li><a href="#answ">FAQ</a></li>          
+          <li><a href="#rev">Отзывы</a></li>          
           <li><a href="2.html">Контакты</a><i></i></li>
         </ul>
         <div class="header__r">
@@ -56,7 +56,7 @@
       </div>
 
       <div class="header__mobile">
-        <a href="" class="header__ph"></a>
+        <a href="tel:+7 927 320-52-22" class="header__ph"></a>
         <div class="burger"></div>
       </div>
     </div>
@@ -83,10 +83,10 @@
           </div>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="contain">
           <div class="down"><img src="img/down.svg" /></div>
-          <div class="h2">Сотрудничаем с <b>20</b> лизинговыми компаниями — <b>лидерами отрасли</b> </div>
+          <div class="h2">Сотрудничаем с <br class="show-575"> <b>20</b> лизинговыми компаниями — <b>лидерами<br class="show-575"> отрасли</b> </div>
           <div class="advantages__row" data-aos="fade-up" data-aos-delay="100">
             <div class="advantages__col">
               <div class="advantages__item">
@@ -97,13 +97,13 @@
             <div class="advantages__col">
               <div class="advantages__item">
                 <div class="advantages__img"><img src="img/advantage2.svg" /></div>
-                <div class="advantages__text">Делаем скидки на<br> автомобили <b>до 15%</b></div>
+                <div class="advantages__text">Делаем скидки на<br><br class="show-575">  автомобили <b>до 15%</b></div>
               </div>
             </div>
             <div class="advantages__col">
               <div class="advantages__item">
                 <div class="advantages__img"><img src="img/advantage3.svg" /></div>
-                <div class="advantages__text">Подбераем самый<br> <b>выгодный</b> график&nbsp;</div>
+                <div class="advantages__text">Подбераем самый<br><br class="show-575"> <b>выгодный</b> график&nbsp;</div>
               </div>
             </div>
             <div class="advantages__col">
@@ -116,9 +116,11 @@
           <p class="advantages__p">Мы оказываем <b>не только</b> услуги лизинга, но и <b>сможем</b> пополнить оборотные средства — кредиты для бизнеса!</p>
         </div>
       </section>     
-      <section class="leasing">
+      <section class="leasing" id="leasing">
         <div class="contain">
           <div class="h2">Что <b>можно</b> оформить в лизинг</div>
+        </div>
+        <div class="contain__w100 contain">
           <div class="leasing__row">
             <div class="leasing__col" data-aos="fade-up" data-aos-delay="100">
               <div class="leasing__it">
@@ -229,7 +231,7 @@
           </div>
         </div>
       </section>      
-      <section class="buss">
+      <section class="buss" id="buss">
         <div class="contain">
           <div class="h2 _white"><b>Кредиты для бизнеса</b> на пополнение оборотных средств</div>
           <div class="buss__text"><b>Помимо</b> оформления лизинга, помогаем быстро получить кредит для бизнеса</div>
@@ -256,13 +258,15 @@
             </div>
           </div>
           <div class="buss__action">
-            <a href="" class="btn__or">Оставить заявку на кредит для бизнеса<i></i></a>
+            <a href="" class="btn__or">Оставить заявку <span class="hide-575">на кредит для бизнеса</span><i></i></a>
           </div>
         </div>
       </section>
-      <section class="calc">
+      <section class="calc" id="calc">
         <div class="contain">
           <div class="h2"><b>Калькулятор</b> платежа по лизингу</div>
+        </div>
+        <div class="calc__contain contain">
           <div class="calc__row calc_init">
             <div class="calc__col calc__col--left">
               <div class="calc__item">
@@ -338,7 +342,7 @@
                     <div class="credit_sum-slider"></div>
                   </div>
                   <div class="calc__item">
-                    <p class="form-control-static">Ежемесячный платеж</p>
+                    <p class="form-control-static">Месячный платеж</p>
                     <div class="calc__item-wrap">
                       <input type="text" class="form-control monthly_payment-input calc__total" value="488 431">
                       <div class="div-control">
@@ -425,6 +429,27 @@
   </div>
 </div>
               </a>
+              <a href="">
+                <div class="cases__item">
+  <div class="cases__img"><img src="img/cases-3.jpg" /></div>
+  <div class="cases__inf">
+    <div class="cases__nom">Купе S-класса</div>
+    <div class="cases__name">Mercedes-Benz S 500</div>
+    <div class="cases__row">
+      <img src="img/cases-icon-1.svg" /><span>Стоимость:</span> 15 355 000 ₽
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-2.svg" /><span>Аванс:</span> 23%
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-3.svg" /><span>Срок лизинга:</span> 25 лет
+    </div>
+    <div class="cases__row">
+      <img src="img/cases-icon-4.svg" /><span>Цель приобритения:</span> возить босса
+    </div>
+  </div>
+</div>
+              </a>
 
             </div>
             <nav> 
@@ -432,12 +457,14 @@
               <span class="dg-next">&gt;</span>
             </nav>
           </div>
-          <div class="cases__actions"><a class="cases__btn">Получить предложение</a></div>
+          <div class="cases__actions"><a href="" class="cases__btn">Получить предложение</a></div>
         </div>
       </section>
-      <section class="answ">
+      <section class="answ" id="answ">
         <div class="contain">
-          <div class="h2"><b>Ответы</b> на частые вопросы</div>
+          <div class="h2"><b>Ответы</b> на <br class="show-575"> частые вопросы</div>
+        </div>
+        <div class="contain contain__w100">
           <div class="answ__w">
             <div class="answ__l">
               <div class="accordion-item">
@@ -538,13 +565,13 @@
           </div>
         </div>
       </section>
-      <section class="rev">        
+      <section class="rev" id="rev">        
         <div class="contain">
           <div class="h2"><b>Отзывы</b> клиентов</div>          
           <div class="tabs rev__choice-tabs" data-aos="fade-up" data-aos-delay="100">
             <ul class="tabs__list">
-              <li class="tabs__list-item active">Текстовые отзывы</li>
-              <li class="tabs__list-item">Видеоотзывы</li>  
+              <li class="tabs__list-item active">Текстовые <div class="hide-575">отзывы</div></li>
+              <li class="tabs__list-item">Видео<div class="hide-575">отзывы</div></li>  
             </ul>
             <ul class="tabs__content-list">
               <li class="tabs__content-list-item active">
@@ -620,7 +647,7 @@
     <div class="modal-form__inner">
       <div class="ask">      
         <div class="ask__head">Форма обратной связи</div>                  
-        <div class="ask__txt"><strong>Заполните форму</strong> и мы ответим на ваш вопрос в течении<strong>15 минут</strong> для расчета лизинга</div>
+        <div class="ask__txt"><strong>Заполните форму</strong> и мы ответим на ваш вопрос в течении <strong>15 минут</strong> для расчета лизинга</div>
         <form class="ask__form">
           <input type="text" placeholder="Ваше имя" />
           <input type="text" placeholder="Название компании" />
@@ -644,7 +671,7 @@
     <div class="modal-form__inner">
       <div class="ask">      
         <div class="ask__head">Задать вопрос</div>                  
-        <div class="ask__txt"><strong>Заполните форму</strong> и мы ответим на ваш вопрос в течении<strong>15 минут</strong></div>
+        <div class="ask__txt"><strong>Заполните форму</strong> и мы ответим на ваш вопрос в течении <strong>15 минут</strong></div>
         <form class="ask__form">
           <input type="text" placeholder="Ваше имя" />
           <input type="text" placeholder="Название компании" />

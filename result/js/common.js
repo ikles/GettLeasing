@@ -185,9 +185,13 @@ $('.eye-3').click(function (e) {
   }
 
   popup('.header__btn', '.modal-overlay_8', '.modal-close_8');
+  popup('.banner__btn', '.modal-overlay_8', '.modal-close_8');
   popup('.leasing__it .btn__or', '.modal-overlay_8', '.modal-close_8');
   popup('.leasing__get .btn__or', '.modal-overlay_7', '.modal-close_7');
   popup('.answ__btn', '.modal-overlay_7', '.modal-close_7');
+  popup('.buss__action .btn__or', '.modal-overlay_8', '.modal-close_8');
+  popup('.calc__bot .btn__or', '.modal-overlay_8', '.modal-close_8');
+  popup('.cases__btn', '.modal-overlay_8', '.modal-close_8');
   
   popup('.leasing__modal-i_1', '.modal-overlay_1', '.modal-close_1');
   popup('.leasing__modal-i_2', '.modal-overlay_2', '.modal-close_2');
@@ -197,14 +201,16 @@ $('.eye-3').click(function (e) {
   popup('.leasing__modal-i_6', '.modal-overlay_6', '.modal-close_6');
 
 
-
+$('.header__btn').click(function () {
+  $('.header__col').removeClass('open');
+})
 
 
 
   $('a[href*=\\#]:not([href=\\#])').click(function () {
     elementClick = $(this).attr("href");
     destination = $(elementClick).offset().top;
-    $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 85}, 1100);
+    $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 50}, 1100);
     return false;
   });
 

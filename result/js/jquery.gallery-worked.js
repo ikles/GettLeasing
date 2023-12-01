@@ -98,19 +98,19 @@
 			if( this.support3d && this.supportTrans ) {
 			
 				leftCSS 	= {
-					'-webkit-transform'	: 'translateX(-350px) translateZ(-200px) rotateY(45deg)',
-					'-moz-transform'	: 'translateX(-350px) translateZ(-200px) rotateY(45deg)',
-					'-o-transform'		: 'translateX(-350px) translateZ(-200px) rotateY(45deg)',
-					'-ms-transform'		: 'translateX(-350px) translateZ(-200px) rotateY(45deg)',
-					'transform'			: 'translateX(-350px) translateZ(-200px) rotateY(45deg)'
+					'-webkit-transform'	: 'translateX(-471px) translateZ(-200px)',
+					'-moz-transform'	: 'translateX(-471px) translateZ(-200px)',
+					'-o-transform'		: 'translateX(-471px) translateZ(-200px)',
+					'-ms-transform'		: 'translateX(-471px) translateZ(-200px)',
+					'transform'			: 'translateX(-471px) translateZ(-200px)'
 				};
 				
 				rightCSS	= {
-					'-webkit-transform'	: 'translateX(350px) translateZ(-200px) rotateY(-45deg)',
-					'-moz-transform'	: 'translateX(350px) translateZ(-200px) rotateY(-45deg)',
-					'-o-transform'		: 'translateX(350px) translateZ(-200px) rotateY(-45deg)',
-					'-ms-transform'		: 'translateX(350px) translateZ(-200px) rotateY(-45deg)',
-					'transform'			: 'translateX(350px) translateZ(-200px) rotateY(-45deg)'
+					'-webkit-transform'	: 'translateX(471px) translateZ(-200px)',
+					'-moz-transform'	: 'translateX(471px) translateZ(-200px)',
+					'-o-transform'		: 'translateX(471px) translateZ(-200px)',
+					'-ms-transform'		: 'translateX(471px) translateZ(-200px)',
+					'transform'			: 'translateX(471px) translateZ(-200px)'
 				};
 				
 				leftCSS.opacity		= 1;
@@ -234,55 +234,55 @@
 				switch( position ) {
 					case 'outleft':
 						return {
-							'-webkit-transform'	: 'translateX(-450px) translateZ(-300px) rotateY(45deg)',
-							'-moz-transform'	: 'translateX(-450px) translateZ(-300px) rotateY(45deg)',
-							'-o-transform'		: 'translateX(-450px) translateZ(-300px) rotateY(45deg)',
-							'-ms-transform'		: 'translateX(-450px) translateZ(-300px) rotateY(45deg)',
-							'transform'			: 'translateX(-450px) translateZ(-300px) rotateY(45deg)',
+							'-webkit-transform'	: 'translateX(-450px) translateZ(-300px)',
+							'-moz-transform'	: 'translateX(-450px) translateZ(-300px)',
+							'-o-transform'		: 'translateX(-450px) translateZ(-300px)',
+							'-ms-transform'		: 'translateX(-450px) translateZ(-300px)',
+							'transform'			: 'translateX(-450px) translateZ(-300px)',
 							'opacity'			: 0,
 							'visibility'		: 'hidden'
 						};
 						break;
 					case 'outright':
 						return {
-							'-webkit-transform'	: 'translateX(450px) translateZ(-300px) rotateY(-45deg)',
-							'-moz-transform'	: 'translateX(450px) translateZ(-300px) rotateY(-45deg)',
-							'-o-transform'		: 'translateX(450px) translateZ(-300px) rotateY(-45deg)',
-							'-ms-transform'		: 'translateX(450px) translateZ(-300px) rotateY(-45deg)',
-							'transform'			: 'translateX(450px) translateZ(-300px) rotateY(-45deg)',
+							'-webkit-transform'	: 'translateX(450px) translateZ(-300px)',
+							'-moz-transform'	: 'translateX(450px) translateZ(-300px)',
+							'-o-transform'		: 'translateX(450px) translateZ(-300px)',
+							'-ms-transform'		: 'translateX(450px) translateZ(-300px)',
+							'transform'			: 'translateX(450px) translateZ(-300px)',
 							'opacity'			: 0,
 							'visibility'		: 'hidden'
 						};
 						break;
 					case 'left':
 						return {
-							'-webkit-transform'	: 'translateX(-350px) translateZ(-200px) rotateY(45deg)',
-							'-moz-transform'	: 'translateX(-350px) translateZ(-200px) rotateY(45deg)',
-							'-o-transform'		: 'translateX(-350px) translateZ(-200px) rotateY(45deg)',
-							'-ms-transform'		: 'translateX(-350px) translateZ(-200px) rotateY(45deg)',
-							'transform'			: 'translateX(-350px) translateZ(-200px) rotateY(45deg)',
+							'-webkit-transform'	: 'translateX(-471px) translateZ(-200px)',
+							'-moz-transform'	: 'translateX(-471px) translateZ(-200px)',
+							'-o-transform'		: 'translateX(-471px) translateZ(-200px)',
+							'-ms-transform'		: 'translateX(-471px) translateZ(-200px)',
+							'transform'			: 'translateX(-471px) translateZ(-200px)',
 							'opacity'			: 1,
 							'visibility'		: 'visible'
 						};
 						break;
 					case 'right':
 						return {
-							'-webkit-transform'	: 'translateX(350px) translateZ(-200px) rotateY(-45deg)',
-							'-moz-transform'	: 'translateX(350px) translateZ(-200px) rotateY(-45deg)',
-							'-o-transform'		: 'translateX(350px) translateZ(-200px) rotateY(-45deg)',
-							'-ms-transform'		: 'translateX(350px) translateZ(-200px) rotateY(-45deg)',
-							'transform'			: 'translateX(350px) translateZ(-200px) rotateY(-45deg)',
+							'-webkit-transform'	: 'translateX(471px) translateZ(-200px)',
+							'-moz-transform'	: 'translateX(471px) translateZ(-200px)',
+							'-o-transform'		: 'translateX(471px) translateZ(-200px)',
+							'-ms-transform'		: 'translateX(471px) translateZ(-200px)',
+							'transform'			: 'translateX(471px) translateZ(-200px)',
 							'opacity'			: 1,
 							'visibility'		: 'visible'
 						};
 						break;
 					case 'center':
 						return {
-							'-webkit-transform'	: 'translateX(0px) translateZ(0px) rotateY(0deg)',
-							'-moz-transform'	: 'translateX(0px) translateZ(0px) rotateY(0deg)',
-							'-o-transform'		: 'translateX(0px) translateZ(0px) rotateY(0deg)',
-							'-ms-transform'		: 'translateX(0px) translateZ(0px) rotateY(0deg)',
-							'transform'			: 'translateX(0px) translateZ(0px) rotateY(0deg)',
+							'-webkit-transform'	: 'translateX(0px) translateZ(0px)',
+							'-moz-transform'	: 'translateX(0px) translateZ(0px)',
+							'-o-transform'		: 'translateX(0px) translateZ(0px)',
+							'-ms-transform'		: 'translateX(0px) translateZ(0px)',
+							'transform'			: 'translateX(0px) translateZ(0px)',
 							'opacity'			: 1,
 							'visibility'		: 'visible'
 						};

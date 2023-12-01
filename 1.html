@@ -39,10 +39,10 @@
           </div>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="contain">
           <div class="down"><img src="img/down.svg" /></div>
-          <div class="h2">Сотрудничаем с <b>20</b> лизинговыми компаниями — <b>лидерами отрасли</b> </div>
+          <div class="h2">Сотрудничаем с <br class="show-575"> <b>20</b> лизинговыми компаниями — <b>лидерами<br class="show-575"> отрасли</b> </div>
           <div class="advantages__row" data-aos="fade-up" data-aos-delay="100">
             <div class="advantages__col">
               <div class="advantages__item">
@@ -53,13 +53,13 @@
             <div class="advantages__col">
               <div class="advantages__item">
                 <div class="advantages__img"><img src="img/advantage2.svg" /></div>
-                <div class="advantages__text">Делаем скидки на<br> автомобили <b>до 15%</b></div>
+                <div class="advantages__text">Делаем скидки на<br><br class="show-575">  автомобили <b>до 15%</b></div>
               </div>
             </div>
             <div class="advantages__col">
               <div class="advantages__item">
                 <div class="advantages__img"><img src="img/advantage3.svg" /></div>
-                <div class="advantages__text">Подбераем самый<br> <b>выгодный</b> график&nbsp;</div>
+                <div class="advantages__text">Подбераем самый<br><br class="show-575"> <b>выгодный</b> график&nbsp;</div>
               </div>
             </div>
             <div class="advantages__col">
@@ -72,9 +72,11 @@
           <p class="advantages__p">Мы оказываем <b>не только</b> услуги лизинга, но и <b>сможем</b> пополнить оборотные средства — кредиты для бизнеса!</p>
         </div>
       </section>     
-      <section class="leasing">
+      <section class="leasing" id="leasing">
         <div class="contain">
           <div class="h2">Что <b>можно</b> оформить в лизинг</div>
+        </div>
+        <div class="contain__w100 contain">
           <div class="leasing__row">
             <div class="leasing__col" data-aos="fade-up" data-aos-delay="100">
               <div class="leasing__it">
@@ -185,7 +187,7 @@
           </div>
         </div>
       </section>      
-      <section class="buss">
+      <section class="buss" id="buss">
         <div class="contain">
           <div class="h2 _white"><b>Кредиты для бизнеса</b> на пополнение оборотных средств</div>
           <div class="buss__text"><b>Помимо</b> оформления лизинга, помогаем быстро получить кредит для бизнеса</div>
@@ -212,13 +214,15 @@
             </div>
           </div>
           <div class="buss__action">
-            <a href="" class="btn__or">Оставить заявку на кредит для бизнеса<i></i></a>
+            <a href="" class="btn__or">Оставить заявку <span class="hide-575">на кредит для бизнеса</span><i></i></a>
           </div>
         </div>
       </section>
-      <section class="calc">
+      <section class="calc" id="calc">
         <div class="contain">
           <div class="h2"><b>Калькулятор</b> платежа по лизингу</div>
+        </div>
+        <div class="calc__contain contain">
           <div class="calc__row calc_init">
             <div class="calc__col calc__col--left">
               <div class="calc__item">
@@ -294,7 +298,7 @@
                     <div class="credit_sum-slider"></div>
                   </div>
                   <div class="calc__item">
-                    <p class="form-control-static">Ежемесячный платеж</p>
+                    <p class="form-control-static">Месячный платеж</p>
                     <div class="calc__item-wrap">
                       <input type="text" class="form-control monthly_payment-input calc__total" value="488 431">
                       <div class="div-control">
@@ -351,6 +355,17 @@
                   "img": "img/cases-1.jpg"
                 })
               </a>
+              <a href="">
+                @@include('var/_cases__item.html',{
+                  "title":"Купе S-класса",
+                  "name":"Mercedes-Benz S 500",
+                  "price":"15 355 000 ₽",
+                  "av":"23%",
+                  "srok":"25 лет",
+                  "goal":"возить босса",
+                  "img": "img/cases-3.jpg"
+                })
+              </a>
 
             </div>
             <nav> 
@@ -358,12 +373,14 @@
               <span class="dg-next">&gt;</span>
             </nav>
           </div>
-          <div class="cases__actions"><a class="cases__btn">Получить предложение</a></div>
+          <div class="cases__actions"><a href="" class="cases__btn">Получить предложение</a></div>
         </div>
       </section>
-      <section class="answ">
+      <section class="answ" id="answ">
         <div class="contain">
-          <div class="h2"><b>Ответы</b> на частые вопросы</div>
+          <div class="h2"><b>Ответы</b> на <br class="show-575"> частые вопросы</div>
+        </div>
+        <div class="contain contain__w100">
           <div class="answ__w">
             <div class="answ__l">
               <div class="accordion-item">
@@ -464,13 +481,13 @@
           </div>
         </div>
       </section>
-      <section class="rev">        
+      <section class="rev" id="rev">        
         <div class="contain">
           <div class="h2"><b>Отзывы</b> клиентов</div>          
           <div class="tabs rev__choice-tabs" data-aos="fade-up" data-aos-delay="100">
             <ul class="tabs__list">
-              <li class="tabs__list-item active">Текстовые отзывы</li>
-              <li class="tabs__list-item">Видеоотзывы</li>  
+              <li class="tabs__list-item active">Текстовые <div class="hide-575">отзывы</div></li>
+              <li class="tabs__list-item">Видео<div class="hide-575">отзывы</div></li>  
             </ul>
             <ul class="tabs__content-list">
               <li class="tabs__content-list-item active">

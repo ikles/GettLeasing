@@ -14,7 +14,7 @@
 	 * Gallery object.
 	 */
 	$.Gallery 				= function( options, element ) {
-	
+
 		this.$el	= $( element );
 		this._init( options );
 		
@@ -24,7 +24,7 @@
 		current		: 0,	// index of current item
 		autoplay	: false,// slideshow on / off
 		interval	: 2000  // time between transitions
-    };
+	};
 	
 	$.Gallery.prototype 	= {
 		_init 				: function( options ) {
@@ -47,10 +47,10 @@
 			
 			// minimum of 3 items
 			if( this.itemsCount < 3 ) {
-					
+
 				this.$nav.remove();
 				return false;
-			
+
 			}	
 			
 			this.current		= this.options.current;
@@ -71,20 +71,20 @@
 			
 			// slideshow
 			if( this.options.autoplay ) {
-			
+
 				this._startSlideshow();
-			
+
 			}
 			
 		},
 		_validate			: function() {
-		
+
 			if( this.options.current < 0 || this.options.current > this.itemsCount - 1 ) {
 				
 				this.current = 0;
-			
+
 			}	
-		
+
 		},
 		_layout				: function() {
 			
@@ -96,28 +96,93 @@
 			var leftCSS, rightCSS, currentCSS;
 			
 			if( this.support3d && this.supportTrans ) {
-			
-				leftCSS 	= {
-					'-webkit-transform'	: 'translateX(-471px) translateZ(-200px)',
-					'-moz-transform'	: 'translateX(-471px) translateZ(-200px)',
-					'-o-transform'		: 'translateX(-471px) translateZ(-200px)',
-					'-ms-transform'		: 'translateX(-471px) translateZ(-200px)',
-					'transform'			: 'translateX(-471px) translateZ(-200px)'
-				};
+
 				
-				rightCSS	= {
-					'-webkit-transform'	: 'translateX(471px) translateZ(-200px)',
-					'-moz-transform'	: 'translateX(471px) translateZ(-200px)',
-					'-o-transform'		: 'translateX(471px) translateZ(-200px)',
-					'-ms-transform'		: 'translateX(471px) translateZ(-200px)',
-					'transform'			: 'translateX(471px) translateZ(-200px)'
-				};
+				if( $(window).width() < 641 ) {
+					leftCSS 	= {
+						'-webkit-transform'	: 'translateX(-271px) translateZ(-200px)',
+						'-moz-transform'	: 'translateX(-271px) translateZ(-200px)',
+						'-o-transform'		: 'translateX(-271px) translateZ(-200px)',
+						'-ms-transform'		: 'translateX(-271px) translateZ(-200px)',
+						'transform'			: 'translateX(-271px) translateZ(-200px)'
+					};
+
+					rightCSS	= {
+						'-webkit-transform'	: 'translateX(271px) translateZ(-200px)',
+						'-moz-transform'	: 'translateX(271px) translateZ(-200px)',
+						'-o-transform'		: 'translateX(271px) translateZ(-200px)',
+						'-ms-transform'		: 'translateX(271px) translateZ(-200px)',
+						'transform'			: 'translateX(271px) translateZ(-200px)'
+					};
+				}
+
+
+				$(window).resize(function() {
+					if( $(window).width() < 641 ) {
+						leftCSS 	= {
+							'-webkit-transform'	: 'translateX(-271px) translateZ(-200px)',
+							'-moz-transform'	: 'translateX(-271px) translateZ(-200px)',
+							'-o-transform'		: 'translateX(-271px) translateZ(-200px)',
+							'-ms-transform'		: 'translateX(-271px) translateZ(-200px)',
+							'transform'			: 'translateX(-271px) translateZ(-200px)'
+						};
+
+						rightCSS	= {
+							'-webkit-transform'	: 'translateX(271px) translateZ(-200px)',
+							'-moz-transform'	: 'translateX(271px) translateZ(-200px)',
+							'-o-transform'		: 'translateX(271px) translateZ(-200px)',
+							'-ms-transform'		: 'translateX(271px) translateZ(-200px)',
+							'transform'			: 'translateX(271px) translateZ(-200px)'
+						};
+					}
+				});
+				
+
+
+				if( $(window).width() > 640 ) {				
+					leftCSS 	= {
+						'-webkit-transform'	: 'translateX(-471px) translateZ(-200px)',
+						'-moz-transform'	: 'translateX(-471px) translateZ(-200px)',
+						'-o-transform'		: 'translateX(-471px) translateZ(-200px)',
+						'-ms-transform'		: 'translateX(-471px) translateZ(-200px)',
+						'transform'			: 'translateX(-471px) translateZ(-200px)'
+					};
+
+					rightCSS	= {
+						'-webkit-transform'	: 'translateX(471px) translateZ(-200px)',
+						'-moz-transform'	: 'translateX(471px) translateZ(-200px)',
+						'-o-transform'		: 'translateX(471px) translateZ(-200px)',
+						'-ms-transform'		: 'translateX(471px) translateZ(-200px)',
+						'transform'			: 'translateX(471px) translateZ(-200px)'
+					};
+				}
+
+				$(window).resize(function() {
+					if( $(window).width() > 640 ) {				
+						leftCSS 	= {
+							'-webkit-transform'	: 'translateX(-471px) translateZ(-200px)',
+							'-moz-transform'	: 'translateX(-471px) translateZ(-200px)',
+							'-o-transform'		: 'translateX(-471px) translateZ(-200px)',
+							'-ms-transform'		: 'translateX(-471px) translateZ(-200px)',
+							'transform'			: 'translateX(-471px) translateZ(-200px)'
+						};
+
+						rightCSS	= {
+							'-webkit-transform'	: 'translateX(471px) translateZ(-200px)',
+							'-moz-transform'	: 'translateX(471px) translateZ(-200px)',
+							'-o-transform'		: 'translateX(471px) translateZ(-200px)',
+							'-ms-transform'		: 'translateX(471px) translateZ(-200px)',
+							'transform'			: 'translateX(471px) translateZ(-200px)'
+						};
+					}
+				});
+
 				
 				leftCSS.opacity		= 1;
 				leftCSS.visibility	= 'visible';
 				rightCSS.opacity	= 1;
 				rightCSS.visibility	= 'visible';
-			
+
 			}
 			else if( this.support2d && this.supportTrans ) {
 				
@@ -145,7 +210,7 @@
 				leftCSS.visibility	= 'visible';
 				rightCSS.opacity	= 1;
 				rightCSS.visibility	= 'visible';
-			
+
 			}
 			
 			this.$leftItm.css( leftCSS || {} );
@@ -166,23 +231,23 @@
 			this.$rightItm		= ( this.current === this.itemsCount - 1 ) ? this.$items.eq( 0 ) : this.$items.eq( this.current + 1 );
 			
 			if( !this.support3d && this.support2d && this.supportTrans ) {
-			
+
 				this.$items.css( 'z-index', 1 );
 				this.$currentItm.css( 'z-index', 999 );
-			
+
 			}
 			
 			// next & previous items
 			if( this.itemsCount > 3 ) {
-			
+
 				// next item
 				this.$nextItm		= ( this.$rightItm.index() === this.itemsCount - 1 ) ? this.$items.eq( 0 ) : this.$rightItm.next();
-				this.$nextItm.css( this._getCoordinates('outright') );
+				this.$nextItm.css( this._getCoordinates('outright') );				
 				
 				// previous item
 				this.$prevItm		= ( this.$leftItm.index() === 0 ) ? this.$items.eq( this.itemsCount - 1 ) : this.$leftItm.prev();
 				this.$prevItm.css( this._getCoordinates('outleft') );
-			
+
 			}
 			
 		},
@@ -193,10 +258,10 @@
 			this.$navPrev.on( 'click.gallery', function( event ) {
 				
 				if( _self.options.autoplay ) {
-				
+
 					clearTimeout( _self.slideshow );
 					_self.options.autoplay	= false;
-				
+
 				}
 				
 				_self._navigate('prev');
@@ -207,10 +272,10 @@
 			this.$navNext.on( 'click.gallery', function( event ) {
 				
 				if( _self.options.autoplay ) {
-				
+
 					clearTimeout( _self.slideshow );
 					_self.options.autoplay	= false;
-				
+
 				}
 				
 				_self._navigate('next');
@@ -230,31 +295,33 @@
 		_getCoordinates		: function( position ) {
 			
 			if( this.support3d && this.supportTrans ) {
-			
+
 				switch( position ) {
-					case 'outleft':
-						return {
-							'-webkit-transform'	: 'translateX(-450px) translateZ(-300px)',
-							'-moz-transform'	: 'translateX(-450px) translateZ(-300px)',
-							'-o-transform'		: 'translateX(-450px) translateZ(-300px)',
-							'-ms-transform'		: 'translateX(-450px) translateZ(-300px)',
-							'transform'			: 'translateX(-450px) translateZ(-300px)',
-							'opacity'			: 0,
-							'visibility'		: 'hidden'
-						};
-						break;
-					case 'outright':
-						return {
-							'-webkit-transform'	: 'translateX(450px) translateZ(-300px)',
-							'-moz-transform'	: 'translateX(450px) translateZ(-300px)',
-							'-o-transform'		: 'translateX(450px) translateZ(-300px)',
-							'-ms-transform'		: 'translateX(450px) translateZ(-300px)',
-							'transform'			: 'translateX(450px) translateZ(-300px)',
-							'opacity'			: 0,
-							'visibility'		: 'hidden'
-						};
-						break;
-					case 'left':
+				case 'outleft':						
+					return {
+						'-webkit-transform'	: 'translateX(-450px) translateZ(-300px)',
+						'-moz-transform'	: 'translateX(-450px) translateZ(-300px)',
+						'-o-transform'		: 'translateX(-450px) translateZ(-300px)',
+						'-ms-transform'		: 'translateX(-450px) translateZ(-300px)',
+						'transform'			: 'translateX(-450px) translateZ(-300px)',
+						'opacity'			: 0,
+						'visibility'		: 'hidden'
+					};
+					break;
+				case 'outright':
+					return {
+						'-webkit-transform'	: 'translateX(450px) translateZ(-300px)',
+						'-moz-transform'	: 'translateX(450px) translateZ(-300px)',
+						'-o-transform'		: 'translateX(450px) translateZ(-300px)',
+						'-ms-transform'		: 'translateX(450px) translateZ(-300px)',
+						'transform'			: 'translateX(450px) translateZ(-300px)',
+						'opacity'			: 0,
+						'visibility'		: 'hidden'
+					};
+					break;
+				case 'left':
+					
+					if( $(window).width() > 640 ) {				
 						return {
 							'-webkit-transform'	: 'translateX(-471px) translateZ(-200px)',
 							'-moz-transform'	: 'translateX(-471px) translateZ(-200px)',
@@ -264,8 +331,51 @@
 							'opacity'			: 1,
 							'visibility'		: 'visible'
 						};
-						break;
-					case 'right':
+					}
+
+					$(window).resize(function() {
+						if( $(window).width() > 640 ) {				
+							return {
+								'-webkit-transform'	: 'translateX(-471px) translateZ(-200px)',
+								'-moz-transform'	: 'translateX(-471px) translateZ(-200px)',
+								'-o-transform'		: 'translateX(-471px) translateZ(-200px)',
+								'-ms-transform'		: 'translateX(-471px) translateZ(-200px)',
+								'transform'			: 'translateX(-471px) translateZ(-200px)',
+								'opacity'			: 1,
+								'visibility'		: 'visible'
+							};
+						}
+					});
+
+					if( $(window).width() < 641 ) {				
+						return {
+							'-webkit-transform'	: 'translateX(-271px) translateZ(-200px)',
+							'-moz-transform'	: 'translateX(-271px) translateZ(-200px)',
+							'-o-transform'		: 'translateX(-271px) translateZ(-200px)',
+							'-ms-transform'		: 'translateX(-271px) translateZ(-200px)',
+							'transform'			: 'translateX(-271px) translateZ(-200px)',
+							'opacity'			: 1,
+							'visibility'		: 'visible'
+						};
+					}
+
+					$(window).resize(function() {
+						if( $(window).width() < 641 ) {				
+							return {
+								'-webkit-transform'	: 'translateX(-271px) translateZ(-200px)',
+								'-moz-transform'	: 'translateX(-271px) translateZ(-200px)',
+								'-o-transform'		: 'translateX(-271px) translateZ(-200px)',
+								'-ms-transform'		: 'translateX(-271px) translateZ(-200px)',
+								'transform'			: 'translateX(-271px) translateZ(-200px)',
+								'opacity'			: 1,
+								'visibility'		: 'visible'
+							};
+						}
+					});
+					break;
+				case 'right':
+					
+							if( $(window).width() > 640 ) {				
 						return {
 							'-webkit-transform'	: 'translateX(471px) translateZ(-200px)',
 							'-moz-transform'	: 'translateX(471px) translateZ(-200px)',
@@ -275,168 +385,210 @@
 							'opacity'			: 1,
 							'visibility'		: 'visible'
 						};
-						break;
-					case 'center':
+					}
+
+					$(window).resize(function() {
+						if( $(window).width() > 640 ) {				
+							return {
+								'-webkit-transform'	: 'translateX(471px) translateZ(-200px)',
+								'-moz-transform'	: 'translateX(471px) translateZ(-200px)',
+								'-o-transform'		: 'translateX(471px) translateZ(-200px)',
+								'-ms-transform'		: 'translateX(471px) translateZ(-200px)',
+								'transform'			: 'translateX(471px) translateZ(-200px)',
+								'opacity'			: 1,
+								'visibility'		: 'visible'
+							};
+						}
+					});
+
+					if( $(window).width() < 641 ) {				
 						return {
-							'-webkit-transform'	: 'translateX(0px) translateZ(0px)',
-							'-moz-transform'	: 'translateX(0px) translateZ(0px)',
-							'-o-transform'		: 'translateX(0px) translateZ(0px)',
-							'-ms-transform'		: 'translateX(0px) translateZ(0px)',
-							'transform'			: 'translateX(0px) translateZ(0px)',
+							'-webkit-transform'	: 'translateX(271px) translateZ(-200px)',
+							'-moz-transform'	: 'translateX(271px) translateZ(-200px)',
+							'-o-transform'		: 'translateX(271px) translateZ(-200px)',
+							'-ms-transform'		: 'translateX(271px) translateZ(-200px)',
+							'transform'			: 'translateX(271px) translateZ(-200px)',
 							'opacity'			: 1,
 							'visibility'		: 'visible'
 						};
-						break;
+					}
+
+					$(window).resize(function() {
+						if( $(window).width() < 641 ) {				
+							return {
+								'-webkit-transform'	: 'translateX(271px) translateZ(-200px)',
+								'-moz-transform'	: 'translateX(271px) translateZ(-200px)',
+								'-o-transform'		: 'translateX(271px) translateZ(-200px)',
+								'-ms-transform'		: 'translateX(271px) translateZ(-200px)',
+								'transform'			: 'translateX(271px) translateZ(-200px)',
+								'opacity'			: 1,
+								'visibility'		: 'visible'
+							};
+						}
+					});
+
+					break;
+				case 'center':
+					return {
+						'-webkit-transform'	: 'translateX(0px) translateZ(0px)',
+						'-moz-transform'	: 'translateX(0px) translateZ(0px)',
+						'-o-transform'		: 'translateX(0px) translateZ(0px)',
+						'-ms-transform'		: 'translateX(0px) translateZ(0px)',
+						'transform'			: 'translateX(0px) translateZ(0px)',
+						'opacity'			: 1,
+						'visibility'		: 'visible'
+					};
+					break;
 				};
-			
+
 			}
 			else if( this.support2d && this.supportTrans ) {
-			
+
 				switch( position ) {
-					case 'outleft':
-						return {
-							'-webkit-transform'	: 'translate(-450px) scale(0.7)',
-							'-moz-transform'	: 'translate(-450px) scale(0.7)',
-							'-o-transform'		: 'translate(-450px) scale(0.7)',
-							'-ms-transform'		: 'translate(-450px) scale(0.7)',
-							'transform'			: 'translate(-450px) scale(0.7)',
-							'opacity'			: 0,
-							'visibility'		: 'hidden'
-						};
-						break;
-					case 'outright':
-						return {
-							'-webkit-transform'	: 'translate(450px) scale(0.7)',
-							'-moz-transform'	: 'translate(450px) scale(0.7)',
-							'-o-transform'		: 'translate(450px) scale(0.7)',
-							'-ms-transform'		: 'translate(450px) scale(0.7)',
-							'transform'			: 'translate(450px) scale(0.7)',
-							'opacity'			: 0,
-							'visibility'		: 'hidden'
-						};
-						break;
-					case 'left':
-						return {
-							'-webkit-transform'	: 'translate(-350px) scale(0.8)',
-							'-moz-transform'	: 'translate(-350px) scale(0.8)',
-							'-o-transform'		: 'translate(-350px) scale(0.8)',
-							'-ms-transform'		: 'translate(-350px) scale(0.8)',
-							'transform'			: 'translate(-350px) scale(0.8)',
-							'opacity'			: 1,
-							'visibility'		: 'visible'
-						};
-						break;
-					case 'right':
-						return {
-							'-webkit-transform'	: 'translate(350px) scale(0.8)',
-							'-moz-transform'	: 'translate(350px) scale(0.8)',
-							'-o-transform'		: 'translate(350px) scale(0.8)',
-							'-ms-transform'		: 'translate(350px) scale(0.8)',
-							'transform'			: 'translate(350px) scale(0.8)',
-							'opacity'			: 1,
-							'visibility'		: 'visible'
-						};
-						break;
-					case 'center':
-						return {
-							'-webkit-transform'	: 'translate(0px) scale(1)',
-							'-moz-transform'	: 'translate(0px) scale(1)',
-							'-o-transform'		: 'translate(0px) scale(1)',
-							'-ms-transform'		: 'translate(0px) scale(1)',
-							'transform'			: 'translate(0px) scale(1)',
-							'opacity'			: 1,
-							'visibility'		: 'visible'
-						};
-						break;
+				case 'outleft':
+					return {
+						'-webkit-transform'	: 'translate(-450px) scale(0.7)',
+						'-moz-transform'	: 'translate(-450px) scale(0.7)',
+						'-o-transform'		: 'translate(-450px) scale(0.7)',
+						'-ms-transform'		: 'translate(-450px) scale(0.7)',
+						'transform'			: 'translate(-450px) scale(0.7)',
+						'opacity'			: 0,
+						'visibility'		: 'hidden'
+					};
+					break;
+				case 'outright':
+					return {
+						'-webkit-transform'	: 'translate(450px) scale(0.7)',
+						'-moz-transform'	: 'translate(450px) scale(0.7)',
+						'-o-transform'		: 'translate(450px) scale(0.7)',
+						'-ms-transform'		: 'translate(450px) scale(0.7)',
+						'transform'			: 'translate(450px) scale(0.7)',
+						'opacity'			: 0,
+						'visibility'		: 'hidden'
+					};
+					break;
+				case 'left':
+					return {
+						'-webkit-transform'	: 'translate(-350px) scale(0.8)',
+						'-moz-transform'	: 'translate(-350px) scale(0.8)',
+						'-o-transform'		: 'translate(-350px) scale(0.8)',
+						'-ms-transform'		: 'translate(-350px) scale(0.8)',
+						'transform'			: 'translate(-350px) scale(0.8)',
+						'opacity'			: 1,
+						'visibility'		: 'visible'
+					};
+					break;
+				case 'right':
+					return {
+						'-webkit-transform'	: 'translate(350px) scale(0.8)',
+						'-moz-transform'	: 'translate(350px) scale(0.8)',
+						'-o-transform'		: 'translate(350px) scale(0.8)',
+						'-ms-transform'		: 'translate(350px) scale(0.8)',
+						'transform'			: 'translate(350px) scale(0.8)',
+						'opacity'			: 1,
+						'visibility'		: 'visible'
+					};
+					break;
+				case 'center':
+					return {
+						'-webkit-transform'	: 'translate(0px) scale(1)',
+						'-moz-transform'	: 'translate(0px) scale(1)',
+						'-o-transform'		: 'translate(0px) scale(1)',
+						'-ms-transform'		: 'translate(0px) scale(1)',
+						'transform'			: 'translate(0px) scale(1)',
+						'opacity'			: 1,
+						'visibility'		: 'visible'
+					};
+					break;
 				};
-			
+
 			}
 			else {
-			
+
 				switch( position ) {
-					case 'outleft'	: 
-					case 'outright'	: 
-					case 'left'		: 
-					case 'right'	:
-						return {
-							'opacity'			: 0,
-							'visibility'		: 'hidden'
-						};
-						break;
-					case 'center'	:
-						return {
-							'opacity'			: 1,
-							'visibility'		: 'visible'
-						};
-						break;
+				case 'outleft'	: 
+				case 'outright'	: 
+				case 'left'		: 
+				case 'right'	:
+					return {
+						'opacity'			: 0,
+						'visibility'		: 'hidden'
+					};
+					break;
+				case 'center'	:
+					return {
+						'opacity'			: 1,
+						'visibility'		: 'visible'
+					};
+					break;
 				};
-			
+
 			}
-		
+
 		},
 		_navigate			: function( dir ) {
 			
 			if( this.supportTrans && this.isAnim )
 				return false;
-				
+
 			this.isAnim	= true;
 			
 			switch( dir ) {
-			
-				case 'next' :
-					
-					this.current	= this.$rightItm.index();
-					
+
+			case 'next' :
+
+				this.current	= this.$rightItm.index();
+
 					// current item moves left
-					this.$currentItm.addClass('dg-transition').css( this._getCoordinates('left') );
-					
+				this.$currentItm.addClass('dg-transition').css( this._getCoordinates('left') );
+
 					// right item moves to the center
-					this.$rightItm.addClass('dg-transition').css( this._getCoordinates('center') );	
-					
+				this.$rightItm.addClass('dg-transition').css( this._getCoordinates('center') );				
+
 					// next item moves to the right
-					if( this.$nextItm ) {
-						
+				if( this.$nextItm ) {
+
 						// left item moves out
-						this.$leftItm.addClass('dg-transition').css( this._getCoordinates('outleft') );
-						
-						this.$nextItm.addClass('dg-transition').css( this._getCoordinates('right') );
-						
-					}
-					else {
+					this.$leftItm.addClass('dg-transition').css( this._getCoordinates('outleft') );
+
+					this.$nextItm.addClass('dg-transition').css( this._getCoordinates('right') );
+
+				}
+				else {
 					
 						// left item moves right
-						this.$leftItm.addClass('dg-transition').css( this._getCoordinates('right') );
+					this.$leftItm.addClass('dg-transition').css( this._getCoordinates('right') );
 					
-					}
-					break;
-					
-				case 'prev' :
+				}
+				break;
+
+			case 'prev' :
 				
-					this.current	= this.$leftItm.index();
-					
+				this.current	= this.$leftItm.index();
+
 					// current item moves right
-					this.$currentItm.addClass('dg-transition').css( this._getCoordinates('right') );
-					
+				this.$currentItm.addClass('dg-transition').css( this._getCoordinates('right') );
+
 					// left item moves to the center
-					this.$leftItm.addClass('dg-transition').css( this._getCoordinates('center') );
-					
+				this.$leftItm.addClass('dg-transition').css( this._getCoordinates('center') );
+
 					// prev item moves to the left
-					if( this.$prevItm ) {
-						
+				if( this.$prevItm ) {
+
 						// right item moves out
-						this.$rightItm.addClass('dg-transition').css( this._getCoordinates('outright') );
+					this.$rightItm.addClass('dg-transition').css( this._getCoordinates('outright') );
 					
-						this.$prevItm.addClass('dg-transition').css( this._getCoordinates('left') );
-						
-					}
-					else {
+					this.$prevItm.addClass('dg-transition').css( this._getCoordinates('left') );
+
+				}
+				else {
 					
 						// right item moves left
-						this.$rightItm.addClass('dg-transition').css( this._getCoordinates('left') );
+					this.$rightItm.addClass('dg-transition').css( this._getCoordinates('left') );
 					
-					}
-					break;	
-					
+				}
+				break;	
+
 			};
 			
 			this._setItems();
@@ -446,7 +598,7 @@
 			
 		},
 		_startSlideshow		: function() {
-		
+
 			var _self	= this;
 			
 			this.slideshow	= setTimeout( function() {
@@ -454,13 +606,13 @@
 				_self._navigate( 'next' );
 				
 				if( _self.options.autoplay ) {
-				
+
 					_self._startSlideshow();
-				
+
 				}
-			
+
 			}, this.options.interval );
-		
+
 		},
 		destroy				: function() {
 			
@@ -478,18 +630,18 @@
 	};
 	
 	$.fn.gallery			= function( options ) {
-	
+
 		if ( typeof options === 'string' ) {
 			
 			var args = Array.prototype.slice.call( arguments, 1 );
 			
 			this.each(function() {
-			
+
 				var instance = $.data( this, 'gallery' );
 				
 				if ( !instance ) {
 					logError( "cannot call methods on gallery prior to initialization; " +
-					"attempted to call method '" + options + "'" );
+						"attempted to call method '" + options + "'" );
 					return;
 				}
 				
@@ -499,20 +651,20 @@
 				}
 				
 				instance[ options ].apply( instance, args );
-			
+
 			});
-		
+
 		} 
 		else {
-		
+
 			this.each(function() {
-			
+
 				var instance = $.data( this, 'gallery' );
 				if ( !instance ) {
 					$.data( this, 'gallery', new $.Gallery( options, this ) );
 				}
 			});
-		
+
 		}
 		
 		return this;
